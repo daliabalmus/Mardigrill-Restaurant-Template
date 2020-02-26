@@ -1,0 +1,98 @@
+
+//    @
+//    @   12.  FOOTERS
+//    @
+
+footer {
+    font-size: $font-size-sm;
+
+    //  Footer Light Colors
+
+    &.footer-light-color {
+        .footer-features {
+            border-bottom: 1px solid $footer-light-border-color;
+            .feature-title {
+                color: $footer-light-title-color;
+            }
+        }
+        .footer-title {
+            color: $footer-light-title-color;
+        }
+        i {
+            color: $footer-light-icon-color;
+        }
+        .social-icons {
+            a:hover {
+                i {
+                    color: $primary !important;
+                }
+            }
+        }
+        li,p,a {
+            color: $footer-light-text-color;
+        }
+        .footer-subscribe-form {
+            .form-group-v1 {
+                border-color: $bluegray-700;
+                input {
+                    &::placeholder {
+                        color: darken($footer-light-text-color, 25%) !important;
+                    }
+                }
+                button {
+                    background-color: $bluegray-700;
+                    color: $footer-light-text-color;
+                }
+            }
+        }
+        .copyright-wrap {
+            border-top:1px solid $footer-light-border-color;
+        }
+    }
+
+    //  Footer Dark Colors
+
+    &.footer-dark-color {
+
+        .footer-features {
+            border-bottom: 1px solid $footer-dark-border-color;
+            .feature-title {
+                color: $footer-dark-title-color;
+            }
+        }
+        .footer-title {
+            color: $footer-dark-title-color;
+        }
+        i {
+            color: $footer-dark-icon-color;
+        }
+        .social-icons {
+            a:hover {
+                i {
+                    color: $primary !important;
+                }
+            }
+        }
+        li,p,a {
+            color: $footer-dark-text-color;
+        }
+        .footer-subscribe-form {
+            .form-group-v1 {
+                border-color: #e1e1e1;
+                button {
+                    background-color: #e1e1e1;
+                    color: $dark;
+                }
+            }
+        }
+        .copyright-wrap {
+            border-top:1px solid $footer-dark-border-color;
+        }
+    }
+
+    a:hover {color: $footer-links-hover; }
+
+    @include media-breakpoint-down(md) {
+        text-align: center;
+    }
+}

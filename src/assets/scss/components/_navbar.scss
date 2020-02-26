@@ -1,0 +1,120 @@
+
+// Navbar
+// -------------------------------------------------------------------------------------------------
+
+.g-navbar-ribbon {
+    .navbar {
+        padding:10px;
+    }
+    .ribbon-wrapper {
+        width:100%;
+        position: relative;
+        background-color: $primary;
+        border-left:2px solid darken( $primary, 5%);
+        border-right:2px solid darken( $primary, 5%);
+        .nav-link {
+            padding: 1rem 1rem !important;
+            border-radius:5px;
+            &:hover {
+                color:$white !important;
+                background-color: darken($primary, 5%);
+            }
+            &:focus {
+				color:$white !important;
+			}
+        }
+        &:before,
+        &:after {
+            content: ' ';
+            position: absolute;
+            display: none;
+            @include media-breakpoint-up(lg) {
+                display: block;
+                width: 80px;
+                height: 0;
+                top: 5px;
+                border-width: 40px 10px;
+                border-style: solid;
+                z-index: -1;
+            }
+        }
+        &:before {
+            left: -60px;
+            border-color: $primary $primary $primary transparent;
+        }
+        &:after {
+            right: -60px;
+            border-color: $primary transparent $primary $primary;
+        }
+
+        .navbar {
+            &:before,
+            &:after {
+                content: ' ';
+                position: absolute;
+                display: none;
+                @include media-breakpoint-up(lg) {
+                    display: block;
+                    width: 0;
+                    height: 0;
+                    top: 100%;
+                    border-width: 5px 10px;
+                    border-style: solid;
+                }
+            }
+            &:before {
+                left: 0px;
+                border-color: darken($primary, 7%) darken($primary, 7%) transparent transparent;
+            }
+            &:after {
+                right: 0px;
+                border-color: darken($primary, 7%)  transparent transparent darken($primary, 7%);
+            }
+        }
+
+    }
+    &.sticky-navbar,
+    &.sticky-navbar-v2 {
+        background-color: $bluegray-900 !important;
+        .ribbon-wrapper {
+            background-color: transparent !important;
+            border:none !important;
+            &:before,
+            &:after {
+                display:none;
+            }
+            .navbar {
+                &:before,
+                &:after {
+                    display: none;
+                }
+            }
+        }
+        .navbar {
+            padding: 0;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            .navbar-nav {
+                .nav-link{
+					&:hover, &:focus {
+						color:$gray-100 !important;
+						background-color: darken($primary, 5%);
+					}
+		
+                }
+            }
+        }
+    }
+}
+@include media-breakpoint-down(lg) {
+    .navbar-expand-lg .navbar-collapse .navbar-nav .nav-link {
+        &:hover {
+            color: #fff !important;
+        }
+        &:focus, &:active {
+            color:$white !important;
+            background-color: darken($primary, 5%);
+        }
+    }
+}
+

@@ -1,0 +1,71 @@
+
+// Widgets
+// -------------------------------------------------------------------------------------------------
+
+.widget {
+    .widget-title {
+        text-transform: uppercase;
+        font-weight: bold;
+        padding: 10px 0px;
+        //border-bottom:2px solid $gray-300;
+        color: $white;
+    }
+    .badge {
+        font-size:13px;
+
+    }
+    a {
+
+        .badge {
+            margin-top:4px;
+        }
+        &:hover {
+            color: theme-color("primary");
+        }
+    }
+    ul,ol {
+        margin:0;
+        padding:0;
+        list-style: none !important;
+    }
+    &.latest-posts-widget {
+        img {
+            width:65px;
+        }
+    }
+    // Widget List
+    .widget-list {
+        li {
+            a {
+                display: block;
+                padding:0px;
+                transition-duration:.2s;
+                &:hover {
+                    color: theme-color("primary");
+                    background: none;
+                }
+            }
+        }
+        &.style2 {
+            li {
+                &:hover a {
+                    color: theme-color("primary");
+                    margin-left: 10px;
+                }
+            }
+        }
+        i {
+            color: #d8d8d8;
+        }
+    }
+    &.tags-widget {
+        .tags {
+            a {
+                color: $white !important;
+                &:hover {
+                    color: $primary !important;
+                }
+            }
+        }
+    }
+}

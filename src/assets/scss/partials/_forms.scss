@@ -1,0 +1,90 @@
+
+/*
+    @
+    @   23. FORMS
+    @
+*/
+
+.form-control {
+    font-size: $font-size-sm;
+    padding: $input-padding-y $input-padding-x;
+    color: $body-color;
+    height:auto !important;
+    &:disabled {
+        background-color: $input-disabled-bg !important;
+    }
+    &:focus {
+        background-color: $input-focus-bg-color !important;
+    }
+}
+
+@each $breakpoint in map-keys($grid-breakpoints) {
+    @include media-breakpoint-up($breakpoint) {
+        $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+        
+        .g-form-control#{$infix}-size-1  {
+            padding: $input-padding-y-sm $input-padding-x-sm !important;
+        }
+        .g-form-control#{$infix}-size-2  {
+            padding: $input-padding-y $input-padding-x !important;
+        }
+        .g-form-control#{$infix}-size-3  {
+            padding: $input-padding-y-lg $input-padding-x-lg !important;
+            font-size: $font-size-base;
+        }
+        
+    }
+}
+
+/*
+    TEXTAREA
+*/
+
+textarea {
+    overflow-x: hidden;
+ }
+.textarea-resize-0 {
+    resize: none;
+}
+select.form-control:not([size]):not([multiple]) {
+    height: auto !important;
+}
+
+/*
+    FORM GROUP v1
+*/
+
+.form-group-v1 {
+    display:flex;
+    flex-direction: row;
+    border:2px solid #eeeeee;
+    .form-control {
+        background-color: transparent !important;
+        border:0 !important;
+    }
+    &.focused {
+        border-color: $primary !important;
+        button {
+            background-color: $primary !important;
+            border-color: $primary;
+            color: $white !important;
+            i {
+                color: $white !important;
+            }
+        }
+    }
+
+    &.form-group-v1-dark {
+        .form-control {
+            color: $bluegray-400 !important;
+            &::placeholder {
+                color: $bluegray-400 !important;
+            }
+        }
+        button {
+            i {
+                color: $bluegray-400;
+            }
+        }
+    }
+}

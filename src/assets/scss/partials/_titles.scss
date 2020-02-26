@@ -1,0 +1,219 @@
+
+/*
+    @
+    @   16. TITLES
+    @
+*/
+
+[class*="g-heading-v1"] {
+    &:after {
+        content: "";
+        display: block;
+        color: theme-color("primary");
+        width:30px;
+        height:2px;
+        background-color:  theme-color("primary");
+        margin:10px 0;
+    }
+
+}
+@each $breakpoint in map-keys($grid-breakpoints) {
+    @include media-breakpoint-up($breakpoint) {
+        $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+    
+        .g-heading#{$infix}-v1 {
+            &:after {
+                margin:10px 0;
+            }
+        }
+        .g-heading#{$infix}-v1-center {
+            &:after {
+                margin:10px auto;
+            }
+
+        }
+        .g-heading#{$infix}-v1-right {
+            &:after {
+                margin:10px 0;
+                display: flex;
+                margin-left:auto;
+            }
+        }
+        .g-heading#{$infix}-v2 {
+            display:inline-block;
+            position: relative;
+            &:before,
+            &:after {
+                content: "";
+                position: absolute;
+                width:50px;
+                height:2px;
+                background-color:  theme-color("primary");
+                top:48%;
+            }
+            &:before {
+                margin-left: -60px;
+            }
+            &:after {
+                margin-left:10px;
+            }
+            @include media-breakpoint-down(xs) {
+                &:before {
+                    display:none;
+                }
+                &:after {
+                    margin:10px auto;
+                    display: block;
+                    position: relative;
+                }
+            }
+        }
+        
+        // Heading v3
+        .g-heading#{$infix}-v3 {
+            display:inline-block;
+            position: relative;
+            &:before,
+            &:after {
+                content: "";
+                position: absolute;
+                width:40px;
+                height:2px;
+                background-color:  theme-color("primary");
+                top:48%;
+                transform: rotate(-45deg);
+            }
+            &:before {
+                margin-left: -50px;
+            }
+            &:after {
+                margin-left:10px;
+            }
+            @include media-breakpoint-down(xs) {
+                &:before {
+                    display:none;
+                }
+                &:after {
+                    margin:10px auto;
+                    display: block;
+                    position: relative;
+                    transform: rotate(0deg);
+                }
+            }
+        }
+        
+    }
+}
+
+.g-title-separator-v2, .g-title-separator-v2-white {
+    position:relative;
+    &:before {
+        content: "";
+        width: 370px;
+        height: 1px;
+        position: absolute;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.11);
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+        transform: translateX(-50%);
+    }
+    &:after {
+        content: "";
+        width: 80px;
+        height: 1px;
+        position: absolute;
+        //bottom: 0;
+        background-color: $primary;
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+        transform: translateX(-50%);
+        top: -1px;
+    }
+}
+.g-title-separator-v2-white {
+    &:before {
+        background-color: rgba(255, 255, 255, 0.3);
+    }
+    &:after {
+        background-color: $white;
+    }
+}
+
+// Heading / Titles Separators
+//
+
+.g-title-separator-v1 {
+    margin:15px auto 20px;
+    width:120px;
+    height: 2px;
+    position:relative;
+    &:before {
+        content: '';
+        position: absolute;
+        width: 80px;
+        height: 2px;
+        top: -3px;
+        left:0;
+        right:0;
+        margin-left:auto;
+        margin-right:auto;
+        background-color: theme-color("primary");
+    }
+    &:after {
+        content: '';
+        position: absolute;
+        width: 40px;
+        height: 2px;
+        bottom:-3px;
+        left:0;
+        right:0;
+        margin-left:auto;
+        margin-right:auto;
+        background-color: theme-color("primary");
+    }
+}
+
+// Title Masks
+//
+
+.title-mask {
+    //font-weight: 700;
+    font-family: 'Montserrat', sans-serif !important;
+    color: #e9e9ef;
+    font-size: 70px;
+    opacity: .6;
+    bottom: 20px;
+    margin: 0;
+    position: absolute;
+    left:0;
+    right:0;
+    @include media-breakpoint-up(sm) {
+
+    }
+    @include media-breakpoint-up(md) {
+        font-size: 130px;
+        bottom: -10px;
+    }
+}
+
+.title-mask-banner {
+    font-weight: 700;
+    font-family: 'Montserrat', sans-serif !important;
+    color: #e9e9ef;
+    font-size: 70px;
+    opacity: .1;
+    bottom: 20px;
+    margin: 0;
+    position: absolute;
+    text-transform: uppercase;
+    left:0;
+    right:0;
+    @include media-breakpoint-up(sm) {
+
+    }
+    @include media-breakpoint-up(md) {
+        font-size: 200px;
+        bottom: -90px;
+    }
+}

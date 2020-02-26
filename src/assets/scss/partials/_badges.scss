@@ -1,0 +1,90 @@
+
+//    @
+//    @   10.  BADGES
+//    @
+
+.g-badge-icon {
+    position: relative !important;
+    display: inline-block !important;
+}
+.badge {
+    padding: 0.25rem .7rem;
+    border-radius:5px;
+    border:1px solid transparent;
+    display: inline-block;
+    vertical-align: middle;
+}
+@each $color, $value in map-colors(colorPalette($mg-colors, 2), $theme-colors, colorPalette($theme-colors-set2, 2), $mg-grays) {
+    @include badge-outline-variant($color, $value);
+}
+
+//  Simple - mg Badge
+
+[class*="ax-badge"] {
+    position: absolute;
+    text-align:center;
+    font-size: 11px;
+    background-color: #dfe8eb;
+    color:#333333;
+    z-index: 10;
+}
+@for $i from 1 through 4 {
+    $size: 20px + ($i - 1) * 2;
+    .g-badge-size-#{$i} {
+        min-width: $size;
+        height: $size;
+        line-height: $size + 1;
+    }
+}
+
+//  Badge - Status Indicator
+//  Used to see the status of your contacts
+
+[class*="ax-badge-status"] {
+    position: absolute;
+    border-radius:50%;
+    border:1px solid #ffffff;
+    box-sizing: content-box;
+}
+@for $i from 1 through 5 {
+    $size: $i - 1;
+    .g-badge-status-size-#{$i} {
+        width:10px + $size;
+        height:10px + $size;
+    }
+}
+.g-status-available { background-color: theme-color('success'); }
+.g-status-busy { background-color: theme-color('danger'); }
+.g-status-away { background-color: theme-color('warning');}
+
+//  Badge Position
+//  Top-Right, Top-Left, Bottom-Right, Bottom-Left
+
+.g-badge-top-right {
+     top:0px;
+     right:0px;
+    -webkit-transform: translate(50%, -50%);
+    -ms-transform: translate(50%, -50%);
+    transform: translate(50%, -50%);
+ }
+.g-badge-top-left {
+    top:0px;
+    left:0px;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+.g-badge-bottom-right {
+    bottom:0px;
+    right:0px;
+    -webkit-transform: translate(50%, 50%);
+    -ms-transform: translate(50%, 50%);
+    transform: translate(50%, 50%);
+}
+.g-badge-bottom-left {
+    bottom:0px;
+    left:0px;
+    -webkit-transform: translate(-50%, 50%);
+    -ms-transform: translate(-50%, 50%);
+    transform: translate(-50%, 50%);
+}

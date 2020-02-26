@@ -1,0 +1,90 @@
+/*
+    @
+    @   29. PAGINATION
+    @
+*/
+
+.g-pagination {
+    display: block;
+    .page-item {
+        .page-link {
+            //vertical-align: middle;
+            border-radius:3px;
+            font-size: $font-size-sm;
+            display: block;
+            &:active {
+                color:#ffffff;
+            }
+        }
+        display: inline-block;
+        margin-left: $pagination-space-between;
+        margin-right: $pagination-space-between;
+        &.active,
+        &:active {
+            .page-link {
+                background-color: $pagination-active-bg;
+            }
+        }
+
+    }
+    .previous-item,
+    .next-item {
+        @include media-breakpoint-down(sm) {
+            display: block;
+            margin-top:8px;
+            margin-bottom:8px;
+            text-align: center;
+        }
+        .page-link {
+            //padding-left:30px;
+            //padding-right:30px;
+            position: relative;
+            i {
+                vertical-align:middle;
+                font-size:10px;
+            }
+        }
+    }
+    .page-item-primary {
+        .page-link {
+            background-color: theme-color('primary');
+            border-color: theme-color('primary');
+            color:#ffffff;
+            &:hover {
+                background-color: lighten(theme-color('primary'), 2%);
+            }
+        }
+
+    }
+    &.circle {
+        .page-link {
+            border-radius:40px !important;
+        }
+    }
+    .pagination-sm,
+    .pagination-lg {
+        .page-item:last-child {
+            .page-link {
+                border-top-right-radius: 3px;
+                border-bottom-right-radius: 3px;
+            }
+        }
+        .page-item:first-child {
+            .page-link {
+                border-top-left-radius: 3px;
+                border-bottom-left-radius: 3px;
+            }
+        }
+    }
+    .pagination-sm {
+        .page-item {
+            .page-link {
+                font-size: $font-size-xs;
+            }
+        }
+    }
+
+}
+
+
+

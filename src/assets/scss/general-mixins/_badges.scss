@@ -1,0 +1,14 @@
+
+// 4.3 Badges
+
+@mixin badge-outline-variant($color, $value) {
+
+    .badge-outline-#{$color} {
+        color: $value !important;
+        background-color: transparent !important;
+        background-image: none;
+        border: 1px solid $value;
+
+    }
+
+}

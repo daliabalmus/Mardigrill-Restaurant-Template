@@ -1,0 +1,115 @@
+
+
+.gallery {
+    img {
+        width:100%;
+    }
+}
+
+
+
+@each $breakpoint in map-keys($grid-breakpoints) {
+    @include media-breakpoint-up($breakpoint) {
+        $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+        .g-hidden#{$infix}-up {
+            display:none !important;
+        }
+
+    }
+}
+@each $breakpoint in map-keys($grid-breakpoints) {
+    @include media-breakpoint-down($breakpoint) {
+        $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+        .g-hidden#{$infix}-down {
+            display:none !important;
+        }
+
+    }
+}
+
+//  Map Contact Onepage-app
+
+.app-map {
+    position: relative !important;
+    height: 300px;
+    -webkit-box-shadow: 0px 0px 64px -14px rgba(28, 31, 33, 0.2);
+    box-shadow: 0px 0px 64px -14px rgba(28, 31, 33, 0.2);
+    @include media-breakpoint-up(lg) {
+        position: absolute !important;
+        top: 50%;
+        left: 0;
+        height: 700px;
+        width: 100%;
+        transform: translate3d(0, -50%, 0);
+    }
+}
+
+.gradient-bg {
+    background-image: -webkit-gradient(linear, left top, left bottom, from($primary), to($indigo));
+    background-image: -o-linear-gradient(top, $primary 0%, $indigo 100%);
+    background-image: linear-gradient(to bottom, $primary 0%, $indigo 100%);
+}
+.gradient-bg-right {
+    background: -webkit-linear-gradient(left, rgba(#4ac1d0, 0.9), $primary) repeat scroll 0 0;
+    background: linear-gradient(90deg, rgba(#4ac1d0, 0.9), $primary) repeat scroll 0 0;   // 38a5b1 b18358 38d08d 4ac1d0
+    //opacity: 0.9;
+}
+
+.g-shadow-v3 {
+    -webkit-box-shadow: 0px 0px 17px 5px rgba($dark, 0.1);
+    box-shadow: 0px 0px 17px 5px rgba($dark, 0.1);
+    transition-duration: .5s;
+}
+.g-shadow-v4 {
+    -webkit-box-shadow: 0px 0px 17px 0px rgba($dark, 0.1);
+    box-shadow: 0px 0px 17px 0px rgba($dark, 0.1);
+    transition-duration: .5s;
+}
+.g-shadow-h:hover {
+    -webkit-box-shadow: 0 10px 24px rgba($dark, 0.1);
+    box-shadow: 0 10px 24px rgba($dark, 0.1);
+}
+
+
+.divider-right {
+    &:after {
+        content: "";
+        position: absolute;
+        top: 2px;
+        height: 25px;
+        left: 0;
+        border-left: 2px dotted $primary;
+    } &:before {  right: 0;  }
+}
+.divider-left.divider-right { &:before {  top: 0;  } }
+.divider-left:after, .divider-right:before {
+    top: -26px;
+    content: "";
+    position: absolute;
+    height: 25px;
+    border-left: 2px dotted $primary;
+}
+.divider {
+    height: 1px;
+    width: -webkit-calc(100% - 70px);
+    width: calc(100% - 70px);
+    position: relative;
+    border-bottom: 2px dotted $primary; // dadada
+    margin: 0 auto;
+    @include media-breakpoint-down(md) {
+        display: none;
+    }
+}
+.border-opacity {
+    -webkit-box-shadow: 0px 0px 0px 1px rgba(163, 163, 163, 0.3);
+    box-shadow: 0px 0px 0px 1px rgba(163, 163, 163, 0.3); }
+
+.world-map-img{
+    .address-home7 {
+        @include media-breakpoint-up(md) {
+            position: absolute;
+        }
+    }
+}

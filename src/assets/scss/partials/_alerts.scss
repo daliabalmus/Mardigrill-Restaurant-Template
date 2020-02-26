@@ -1,0 +1,53 @@
+
+//    @
+//    @   9.  ALERTS
+//    @
+
+.alert-dismissible {
+    position: relative;
+    .close {
+        top:0px;
+        right: 10px;
+        padding: .65rem .4rem;
+        position: absolute;
+        //height:100%;
+        opacity:1;
+        span {
+            text-shadow: none;
+        }
+    }
+}
+.alert {
+    font-size: 0.875rem;
+    &.alert-icon-left {
+        padding-left:3rem + $alert-padding-x;
+        border:0;
+        .alert-icon {
+            width:3rem;
+            position:absolute;
+            top:0;
+            left:0;
+            height:100%;
+            text-align: center;
+            i {
+                top: 50%;
+                left: 50%;
+                position:absolute;
+                margin-right: -50%;
+                -webkit-transform: translate(-50%, -50%);
+                -moz-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
+            }
+        }
+        &.alert-rounded {
+            .alert-icon {
+                border-top-left-radius: 30px;
+                border-bottom-left-radius: 30px;
+            }
+        }
+    }
+    &.alert-rounded {
+        border-radius:30px;
+    }
+ 
+}

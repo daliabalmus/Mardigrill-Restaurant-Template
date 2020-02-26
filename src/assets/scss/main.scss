@@ -1,0 +1,142 @@
+/*
+    @
+    @   MARDIGRILL MAIN
+    @
+    @   MARDIGRILL RESPONSIVE TEMPLATE - Version 1.0.0
+    @
+    @   MAIN SCSS - imported SCSS partials
+    @   general components + general utilities
+    @
+    @   1. Functions
+    @   2. Variables
+    @   3. Bootstrap ( node_modules )
+    @   4. Mixins
+    @       4.1 - Alerts
+    @       4.2 - Backgrounds
+    @       4.3 - Badges
+    @       4.4 - Borders
+    @       4.5 - Buttons
+    @       4.6 - Icons
+    @       4.7 - Text
+    @   5. Reboot
+    @   6. Preloader
+    @   7. Navbar
+    @       7.1 Mardigrill Header ( Navbar )
+    @       7.2 Dropdown ( Menu - Submenu )
+    @   8. Navs
+    @       8.1 Nav Gallery
+    @       8.2 MARDIGRILL Nav Tabs
+    @   9. Alerts
+    @   10. Badges
+    @   11. Arrows
+    @   12. Footers
+    @   13. Carousels
+    @   14. Counters
+    @       14.1 Countdown
+    @       14.2 Count Up
+    @   14. Gallery-Images
+    @       14.1 Magnific Popup
+    @       14.2 Magnific Popup - Horizontal effect
+    @       14.3 Magnific Popup - Vertical effect
+    @   15. Masonry-Grid
+    @   16. Titles
+    @
+    @   18. Icons
+    @   19. Profile
+    @   20. Buttons
+    @       20.1 Colors
+    @       20.2 Hover effect
+    @       20.3 Hover effect v1
+    @       20.4 Hover effect v2
+    @       20.5 Sizes
+    @   21. Tooltips + Popovers
+    @   22. List / List-Groups
+    @   23. Forms
+    @   24. Custom-Forms
+    @       24.1 Custom File Input
+    @       24.2 Custom Checkbox
+    @       24.3 Custom Checkbox v2
+    @       24.4 Custom Checkbox v3
+    @       24.5 Custom Radio v1
+    @       24.6 Custom Radio v2
+    @       24.7 Custom Radio v3
+    @       24.8 Quantities
+    @       24.9 Toggle / Switch
+    @   25. Breadcrumb
+    @   26. Widgets
+    @       26.1 Tags
+    @       26.2 Slider Range
+    @   27. Accordions
+    @   28. Progress-Bars
+    @       28.1 Style 1
+    @       28.2 Style 2
+    @       28.3 Sizes
+    @       28.4 Circles
+    @       28.5 Progress Steps
+    @   29. Paginations
+    @   30. Animations
+    @       30.1 Left / Top ( Overlay + Push )
+    @       30.2 Top Reveal
+    @       30.3 Bottom Reveal
+    @       30.4 Bottom Slide
+    @       30.5 Zoom
+    @       30.5 Fade In
+    @       30.6 Scroll Down ( Button )
+    @       30.7 Scroll Up ( Button )
+    @       30.8 Typed ( cursor ) Blink
+    @   31. Ribbons
+    @   32. Generals ( general utilities )
+*/
+
+
+@import "partials/functions";
+@import "variables";
+@import "../../../node_modules/bootstrap/scss/bootstrap";
+@import "general-mixins/_mixins";
+
+@import "partials/reboot";
+@import "partials/preloader";
+@import "partials/navbar";
+@import "partials/dropdown";
+@import "partials/navs";
+@import "partials/alerts";
+@import "partials/badges";
+@import "partials/arrows";
+@import "partials/footers";
+@import "partials/carousels";
+@import "partials/counters";
+
+@import "partials/cards";
+@import "partials/sections";
+@import "partials/gallery-images";
+@import "partials/masonry-grid";
+@import "partials/titles";
+@import "partials/tables";
+@import "partials/icons";
+@import "partials/profile";
+@import "partials/buttons";
+@import "partials/buttons-scrollupdown";
+@import "partials/tooltips";
+@import "partials/list-group";
+@import "partials/forms";
+@import "partials/custom-forms";
+@import "partials/breadcrumb";
+@import "partials/button-group";
+@import "partials/input-group";
+@import "partials/widgets";
+@import "partials/accordions";
+@import "partials/progress-bars";
+@import "partials/perfect-scrollbar-custom";
+@import "partials/paginations";
+@import "partials/animations";
+@import "partials/ribbons";
+@import "partials/mix-of-elements";
+@import "partials/popup-gallery";
+@import "general-utilities/generals";
+
+
+@import "components/forms";
+@import "components/mix-of-elements";
+@import "components/navbar";
+@import "components/tabs";
+@import "components/widgets";

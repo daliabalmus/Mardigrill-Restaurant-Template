@@ -1,0 +1,51 @@
+
+//  4.5 Buttons
+
+@mixin btn-variant($parent, $background, $border) {
+    .g-btn-#{$parent} {
+        background-color: $background;
+        color: color-yiq($background);
+        @include box-shadow($btn-box-shadow);
+        &:hover {
+            color: color-yiq($background);
+            background-color: lighten($background, 5%);
+            border-color: lighten($border, 3%);
+        }
+        &-h:hover {
+            background-color: $background !important;
+            color: color-yiq($background) !important;
+            border-color: darken($border, 3%) !important;
+        }
+    }
+
+    .g-btn-outline-#{$parent} {
+        color: $background;
+        background-color: transparent;
+        background-image: none;
+        border-color: $background !important;
+        &:hover {
+            color: color-yiq($background);
+            background-color: $background;
+            border-color: $background;
+        }
+        &:focus,
+        &.focus,
+        &:active {
+            @if $enable-shadows {
+                box-shadow: $btn-box-shadow, 0 0 5px 0px rgba($border, .5);
+            } @else {
+                box-shadow: none !important;
+            }
+        }
+    }
+    
+}
+@mixin btn-grays-hover($parent, $background, $border) {
+    .g-btn-#{$parent} {
+        &:hover {
+            color: color-yiq($background);
+            background-color: darken($background, 2%);
+            border-color: darken($border, 2%);
+        }
+    }
+}

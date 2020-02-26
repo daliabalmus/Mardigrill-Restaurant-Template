@@ -1,0 +1,139 @@
+
+//    @
+//    @   5.  REBOOT
+//    @
+
+body {
+    margin:0;
+    padding:0;
+    overflow-x: hidden;
+    webkit-font-smoothing: antialiased;
+    -webkit-backface-visibility:hidden;
+    text-rendering: optimizelegibility;
+}
+
+body, html {
+    height:100%;
+}
+#main-content {
+    max-width:100%;
+    overflow: hidden;
+    margin:0;
+    padding:0;
+    top:0;
+    position: relative;
+}
+section {
+    position: relative;
+}
+.overlay {
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+}
+
+img {
+    //width:100%;
+    vertical-align: middle;
+    border-style: none;
+}
+.g-overflow-hidden {
+    overflow: hidden !important;
+}
+a, a:hover, a:focus, a:active, a:link, img {
+    outline: none;
+    text-decoration: none !important;
+}
+a.g-text-underline {
+    text-decoration: underline !important;
+}
+h1,.h1,h2,.h2,h3,.h3,h4,.h4,h5,.h5,h6,.h6  {
+    margin-bottom:0;
+    font-weight: 500;
+    color: $dark;
+    font-family: 'Quicksand', sans-serif;
+}
+
+ul, ol {
+    padding-left:30px;
+    margin:0;
+}
+.list-style-inside {
+    list-style-position: inside;
+}
+
+.jumbotron {
+    margin-bottom:0;
+}
+::selection {
+    color: #ffffff;
+    background-color: theme-color("dark");
+}
+blockquote,
+figure {
+    margin-bottom:0;
+}
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 100px white inset;
+    &:focus {
+        -webkit-box-shadow: 0 0 0 100px white inset;
+    }
+}
+.banner {
+    position: relative;
+    //overflow: hidden;
+    .banner-text {
+        z-index: 1;
+    }
+}
+#map {
+    overflow: hidden;
+}
+
+.modal-backdrop {
+    z-index: 9999;
+    &.fade {
+        opacity: 0;
+    }
+    &.show {
+        opacity: 0.6; }
+}
+.modal {
+    z-index: 99999;
+}
+
+pre[class*="language-"] {
+    background-color: #f9f9f9;
+    border:1px solid #dddddd;
+}
+code[class*="language-"] {
+    text-shadow:none !important;
+}
+.cursor-pointer {
+    cursor:pointer !important;
+}
+.g-indexup {
+    z-index: 1 !important;
+}
+.g-indexdown {
+    z-index: -1 !important;
+}
+button {
+    &:active, &:focus {
+        outline: 0;
+    }
+}
+
+// PRISM
+
+pre.line-numbers {
+    position: relative;
+    padding-left: 1.5rem;
+    counter-reset: linenumber;
+}
+.line-numbers .line-numbers-rows {
+    border-right: 1px solid #d2d2d2;
+}
+

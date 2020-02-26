@@ -1,0 +1,67 @@
+/*
+    @
+    @   21. TOOLTIPS + POPOVERS
+    @
+*/
+
+//.tooltip {
+//    z-index: 5555;
+//}
+
+.bs-tooltip-top-demo,
+.bs-tooltip-bottom-demo,
+.bs-popover-top-demo,
+.bs-popover-bottom-demo {
+    .arrow {
+		position: absolute;
+		left: 50%;
+		-webkit-transform: translateX(-50%);
+		-moz-transform: translateX(-50%);
+		transform: translateX(-50%);
+    }
+}
+.bs-tooltip-left-demo,
+.bs-tooltip-right-demo,
+.bs-popover-left-demo,
+.bs-popover-right-demo {
+    .arrow {
+		position: absolute;
+		top: 50%;
+		-webkit-transform: translateY(-50%);
+		-moz-transform: translateY(-50%);
+		transform: translateY(-50%);
+    }
+}
+// Static Tooltips Example
+.static-tooltip-example {
+    .tooltip {
+        display: inline-block;
+        position: relative;
+        margin: .5rem;
+        opacity: 1;
+    }
+}
+
+// Static Popovers Example
+
+.static-popover-example {
+    .popover {
+        display: block;
+        position: relative;
+        margin: .5rem;
+        float: left;
+    }
+}
+// Wrapper for the tooltip content
+.tooltip {
+	z-index: 100;
+    .tooltip-inner {
+        max-width: $tooltip-max-width;
+        padding: $tooltip-padding-y $tooltip-padding-x;
+        color: $tooltip-color !important;
+        text-align: center;
+        background-color: $tooltip-bg !important;
+        @include border-radius($tooltip-border-radius);
+    }
+}
+

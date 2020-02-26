@@ -1,0 +1,92 @@
+{% extends '../_partials/main-layout.html' %}
+{% block page-title %}<title>Restaurant Team Member Profile </title> {% endblock %}
+{%- set current_page = 'Team Member Profile' -%}
+{% block content %}
+<!-- Main Wrapper -->
+
+<div class="main-wrapper">
+
+    <!-- Header -->
+    <header id="header" class="g-header position-absolute g-py-30">
+
+        <!-- Navbar -->
+        <div class="g-navbar-wrapper g-navbar-ribbon ribbon-light g-navbar-white-color bg-transparent scrollspy-v1">
+            {% include '../_partials/navbar.html' %}
+        </div>
+        <!-- END Navbar -->
+
+    </header>
+    <!-- END Header -->
+
+    <!-- Main Content -->
+    <div id="main-content">
+
+        <!-- Page Banner -->
+        {% include '../_partials/page-header-breadcrumb.html' %}
+        <!-- END Page Banner -->
+
+        <section class="g-py-100">
+
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <div class="g-bg-gray-lighten-4 g-mb-50 g-mx-lg-100">
+                        <p class="text-center"><img class="img-fluid" src="assets/images/chef2.png" alt="Image Description"></p>
+                    </div>
+                    <div class="text-center">
+                                <h2 class="g-mb-25 font-dancing g-text-primary g-font-size-50">William Phrall</h2>
+                                <p class="text-muted g-mb-25">Head Chef/Owner</p>
+                                <p class="g-mb-25 g-font-size-30 font-weight-semibold">A Juneau, Alaska native, Mrs. Applebaum has come a long way since her high school graduation all the way up to getting a Brown University Master’s degree in Economics.</p>
+                                <p class="g-mb-25 text-muted g-font-size-20">Talented with the digits, she’s no less successful when it comes to managing the human resources of the company. Ask anyone at our office who is…</p>
+                                <ul class="list-inline text-center">
+                                    <li class="list-inline-item align-middle g-mx-2">
+                                        <a href="#" class="g-icon-v1 g-icon-size-2 g-icon-gray-lighten-3 g-icon-dark-h rounded-circle">
+                                            <i class="fa fa-facebook"></i>
+                                        </a>
+                                    </li>
+                                    <li class="list-inline-item align-middle g-mx-2">
+                                        <a href="#" class="g-icon-v1 g-icon g-icon-size-2 g-icon-gray-lighten-3 g-icon-dark-h rounded-circle">
+                                            <i class="fa fa-twitter"></i>
+                                        </a>
+                                    </li>
+                                    <li class="list-inline-item align-middle g-mx-2">
+                                        <a href="#" class="g-icon-v1 g-icon g-icon-size-2 g-icon-gray-lighten-3 g-icon-dark-h rounded-circle">
+                                            <i class="fa fa-google-plus"></i>
+                                        </a>
+                                    </li>
+                                    <li class="list-inline-item align-middle g-mx-2">
+                                        <a href="#" class="g-icon-v1 g-icon g-icon-size-2 g-icon-gray-lighten-3 g-icon-dark-h rounded-circle">
+                                            <i class="fa fa-pinterest"></i>
+                                        </a>
+                                    </li>
+                                    <li class="list-inline-item align-middle g-mx-2">
+                                        <a href="#" class="g-icon-v1 g-icon g-icon-size-2 g-icon-gray-lighten-3 g-icon-dark-h rounded-circle">
+                                            <i class="fa fa-youtube"></i>
+                                        </a>
+                                    </li>
+                                    <li class="list-inline-item align-middle g-mx-2">
+                                        <a href="#" class="g-icon-v1 g-icon g-icon-size-2 g-icon-gray-lighten-3 g-icon-dark-h rounded-circle">
+                                            <i class="fa fa-linkedin"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Footer -->
+        <div>
+            {% include '../_partials/footer.html' %}
+        </div>
+        <!-- END Footer -->
+
+
+    </div>
+    <!-- END Main Content -->
+
+</div>
+
+<!-- END Main Wrapper -->
+{% endblock %}
+{% block additional-footer-scripts %}{% endblock %}

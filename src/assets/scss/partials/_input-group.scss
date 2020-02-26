@@ -1,0 +1,81 @@
+
+/*
+    @
+    @   INPUT GROUP
+    @
+*/
+
+
+.input-group-prepend,
+.input-group-append {
+    @include transition($input-transition);
+    border:1px solid $input-group-addon-border-color;
+    align-items: center;
+    justify-content: center;
+    background-color: $input-group-append-prepend-bg;
+    a, .btn {
+        border-radius:0;
+    }
+}
+
+
+@each $breakpoint in map-keys($grid-breakpoints) {
+    @include media-breakpoint-up($breakpoint) {
+        $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+        .input-group#{$infix}-sm > .form-control,
+        .input-group#{$infix}-sm > .input-group-prepend > .input-group-text,
+        .input-group#{$infix}-sm > .input-group-append > .input-group-text,
+        .input-group#{$infix}-sm > .input-group-prepend > .btn,
+        .input-group#{$infix}-sm > .input-group-append > .btn {
+            padding: $input-btn-padding-y-sm $input-btn-padding-x-sm !important;
+        }
+    
+        .input-group#{$infix}-md > .form-control,
+        .input-group#{$infix}-md > .input-group-prepend > .input-group-text,
+        .input-group#{$infix}-md > .input-group-append > .input-group-text,
+        .input-group#{$infix}-md > .input-group-prepend > .btn,
+        .input-group#{$infix}-md > .input-group-append > .btn {
+            padding: $input-btn-padding-y $input-btn-padding-x !important;
+        }
+    
+    
+        .input-group#{$infix}-lg > .form-control,
+        .input-group#{$infix}-lg > .input-group-prepend > .input-group-text,
+        .input-group#{$infix}-lg > .input-group-append > .input-group-text,
+        .input-group#{$infix}-lg > .input-group-prepend > .btn,
+        .input-group#{$infix}-lg > .input-group-append > .btn {
+            padding: $input-btn-padding-y-lg $input-btn-padding-x-lg !important;
+        }
+
+    }
+}
+
+.focus-effect {
+    &.focused {
+        .input-group-prepend,
+        .input-group-append {
+            border-color: $input-focus-border-color !important;
+        }
+    }
+}
+.focus-effect.focus-v2 {
+    &.focused {
+        .input-group-prepend,
+        .input-group-append {
+            border-color: $input-focus-border-color !important;
+            background-color: $input-focus-border-color !important;
+            color: color-yiq($input-focus-border-color) !important;
+            transition: 0.2s;
+            a, .btn {
+                background-color: $input-focus-border-color !important;
+                color: color-yiq($input-focus-border-color) !important;
+            }
+        }
+    }
+}
+
+.input-group-btn:not(:first-child) > .btn,
+.input-group-btn:not(:first-child) > .btn-group {
+    margin-left: 0px !important;
+}

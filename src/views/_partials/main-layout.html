@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <meta name="description" content="Mardigrill Responsive Template">
+    <meta name="keywords" content="Theme, Template, Restaurant, Bootstrap, SASS, Multipage, Onepage, jQuery">
+    <meta name="distribution" content="global">
+
+    <!-- Favicon -->
+    <link rel=icon href="assets/images/overview/favicon.png" sizes="16x16" type="image/png">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700,800" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700,800" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="assets/fonts/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/fonts/css/simple-line-icons.css">
+
+    <link rel="stylesheet" href="assets/css/main.css">
+
+    {% block page-title %}<title>Mardigrill Multipurpose Template</title>{%endblock %}
+    {% block head-scripts %}{%endblock%}
+    {% block head %}
+</head>
+<body data-spy="scroll" data-target=".navbar-scrollspy" data-offset="50">
+
+<div id="scrollUp">
+    <a href="#top">
+        <span class="icon-arrow-up"></span>
+    </a>
+</div>
+
+{% block content %}{% endblock %}
+{% block footer-scripts %}
+
+<script src="assets/js/vendor/jquery.js"></script>
+<script src="assets/js/vendor/popper.js"></script>
+
+<script src="assets/js/vendor/bootstrap.js"></script>
+
+<script src="assets/js/popup-gallery.js"></script>
+<script src="assets/js/main.js"></script>
+
+{% endblock %}
+{% block additional-footer-scripts %}{% endblock %}
+</body>
+</html>

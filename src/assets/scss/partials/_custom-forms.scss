@@ -1,0 +1,26 @@
+
+/*
+    @
+    @   AMPREX CUSTOM FORMS
+    @   --------------------------------------------------------------------------------------------
+    @   1. Checkboxes
+    @   2. Custom File - Upload
+    @   3. Quantity
+    @   4. Radio
+    @   5. Toggle / Switch Buttons
+    @
+*/
+
+@import "custom-forms/checkboxes";
+@import "custom-forms/custom-file-upload";
+@import "custom-forms/quantity";
+@import "custom-forms/radio-buttons";
+@import "custom-forms/toggle-buttons";
+
+.custom-control-inline {
+    align-items: center;
+    @include media-breakpoint-down(sm) {
+        display: block;
+    }
+}
+

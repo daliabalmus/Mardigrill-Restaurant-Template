@@ -1,0 +1,21 @@
+
+// Forms
+// -------------------------------------------------------------------------------------------------
+
+.reservation-form {
+    .input-group-prepend, .form-control {
+        border-color: $gray-700;
+        &:focus {
+            border-color: $primary;
+        }
+    }
+}
+
+.reservation-form-home-2 {
+    .input-group-prepend, .form-control {
+        border-color: $gray-200;
+        &:focus {
+            border-color: $primary;
+        }
+    }
+}

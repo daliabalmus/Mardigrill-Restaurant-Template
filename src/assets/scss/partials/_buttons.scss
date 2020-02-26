@@ -1,0 +1,143 @@
+
+/*
+    @
+    @   20. BUTTONS
+    @       20.1 COLORS
+    @       20.2 HOVER EFFECT
+    @       20.3 HOVER EFFECT V1
+    @       20.4 HOVER EFFECT V2
+    @       20.5 SIZES
+    @
+*/
+
+.btn {
+	font-size: $font-size-sm;
+    position: relative;
+    cursor: pointer;
+    line-height: $btn-line-height;
+    &:focus,
+    &.focus,
+    &:active {
+        outline: 0 !important;
+        -webkit-box-shadow: none !important;
+        box-shadow: none  !important;
+    }
+    &:not([disabled]):not(.disabled):active,
+    &:not([disabled]):not(.disabled).active {
+        background-image: none;
+        box-shadow: none;
+    }
+    .btn-icon-only {
+        padding-left:1rem !important;
+        padding-right:1rem !important;
+    }
+}
+
+.btn {
+    i {
+        //vertical-align: middle;
+    }
+}
+
+/*
+    20.1
+    COLORS
+    -------------------------------------------------------------------------------------------------
+*/
+
+@each $key, $value in map-colors(colorPalette($mg-colors, 10), $theme-colors, colorPalette($theme-colors-set2, 10), $mg-grays) {
+    @include btn-variant($key, $value, $value);
+}
+
+@each $key, $value in map-colors($mg-colors) {
+    @include btn-grays-hover($key, $value, $value);
+}
+
+.g-btn-white {
+    background-color:#ffffff;
+    color:#111111;
+}
+.g-btn-black {
+    background-color:#000000;
+    color:#ffffff;
+}
+.g-btn-light:hover {
+    background-color: darken($light, 3%);
+}
+
+/*
+    20.2
+    HOVER EFFECT
+    -------------------------------------------------------------------------------------------------
+*/
+[class*="g-btn-outline"] {
+    &.g-btn-hover-v1-left,
+    &.g-btn-hover-v1-right,
+    &.g-btn-hover-v1-top,
+    &.g-btn-hover-v1-bottom {
+        background-color: transparent !important;
+    }
+}
+
+[class*="g-btn-hover"] {
+    overflow: hidden !important;
+    transition: .2s ease-in-out;
+    z-index: 1;
+    span, i {
+        z-index: 2;
+        position: relative;
+    }
+    &:before {
+        content: "";
+        position: absolute;
+        transition: .2s ease-in-out;
+        z-index: -1;
+    }
+}
+
+/*
+    20.3
+    SIZES
+    -------------------------------------------------------------------------------------------------
+*/
+
+
+@each $breakpoint in map-keys($grid-breakpoints) {
+    @include media-breakpoint-up($breakpoint) {
+        $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+        
+        .g-btn#{$infix}-xs  {
+            @include button-size($input-btn-padding-y-xs, $input-btn-padding-x-xs, $font-size-xs, $input-btn-line-height-xs, $btn-border-radius);
+        }
+        .g-btn#{$infix}-sm  {
+            @include button-size($input-btn-padding-y-sm, $input-btn-padding-x-sm, $font-size-xs, $input-btn-line-height-sm, $btn-border-radius);
+        }
+        .g-btn#{$infix}-md  {
+            @include button-size($input-btn-padding-y, $input-btn-padding-x, $font-size-sm, $input-btn-line-height-sm, $btn-border-radius);
+        }
+        .g-btn#{$infix}-lg  {
+            @include button-size($input-btn-padding-y-lg, $input-btn-padding-x-lg, $font-size-sm, $input-btn-line-height-lg, $btn-border-radius);
+        }
+        .g-btn#{$infix}-xl  {
+            @include button-size($input-btn-padding-y-xl, $input-btn-padding-x-xl, $font-size-base, $input-btn-line-height-xl, $btn-border-radius);
+        }
+    }
+}
+
+
+.facebook-btn {
+    background-color: #4a6ea9;
+    color:#ffffff;
+    &:hover {
+        background-color: darken(#4a6ea9, 4%);
+        color:#ffffff;
+    }
+}
+.google-btn {
+    background-color: #dd5044;
+    color:#ffffff;
+    &:hover {
+        background-color: darken(#dd5044, 4%);
+        color:#ffffff;
+    }
+}

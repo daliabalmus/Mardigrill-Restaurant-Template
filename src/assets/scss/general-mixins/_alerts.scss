@@ -1,0 +1,42 @@
+
+// 4.1 Alerts
+
+@mixin g-alert-variant($background, $border, $color, $icon-bg) {
+    color: $color;
+    @include gradient-bg($background);
+    border-color: $border;
+    
+    hr {
+        border-top-color: darken($border, 5%);
+    }
+    
+    .alert-link {
+        color: darken($color, 10%);
+        &:hover {
+            text-decoration: underline !important;
+        }
+    }
+    
+    .alert-icon {
+        background-color: $icon-bg !important;
+        color: color-yiq($icon-bg) !important;
+    }
+    
+}
+@mixin ax-alert-solid-variant($color) {
+
+    background-color: $color;
+    border-color: $color;
+    color: color-yiq($color);
+    
+    .alert-link {
+        color: darken($color, 10%);
+        &:hover {
+            text-decoration: underline !important;
+        }
+    }
+    .alert-icon {
+        background-color: darken($color, 8%) !important;
+        color: color-yiq($color) !important;
+    }
+}

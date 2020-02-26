@@ -1,0 +1,164 @@
+
+/*
+    AMPREX RADIO BUTTONS
+    -------------------------------------------------------------------------------------------------
+*/
+
+//  Default Radio Button
+//  Version 1
+
+.g-radio-button {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    user-select: none;
+    padding-left: 0px;
+    white-space: nowrap;
+    margin-bottom:0;
+    .g-radio-input {
+        position: absolute;
+        z-index: -1;    // Put the input behind the label so it doesn't overlay text
+        opacity: 0;
+    }
+    .g-radio-handle {
+        display: inline-block;
+        vertical-align: middle;
+        width:18px;
+        height:18px;
+        background-color: #eeeeee;
+        position: relative;
+        left:0;
+        top:0;
+        border-radius:50%;
+        //border:1px solid transparent;
+    }
+    span {
+        display: inline-block;
+        vertical-align: middle;
+    }
+    &:hover {
+        .g-radio-handle {
+            background-color:#dddddd;
+        }
+    }
+    input:checked + .g-radio-handle {
+        background-color: $primary;
+    }
+    input:checked + .g-radio-handle:after {
+        content: "";
+        width:14px;
+        height:14px;
+        background-color: $white;
+        position:absolute;
+        border-radius:50%;
+        top: 50%;
+        left: 50%;
+        position:absolute;
+        margin-right: -50%;
+        -webkit-transform: translate(-50%, -50%);
+        -moz-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+    }
+    &.g-radio-v2 {
+        input:checked + .g-radio-handle {
+            background-color: $white;
+            border:1px solid $primary;
+        }
+        input:checked + .g-radio-handle:after {
+            width:8px;
+            height:8px;
+            background-color: $primary;
+        }
+    }
+    &.g-radio-v3 {
+        input:checked + .g-radio-handle:after {
+            width:8px;
+            height:8px;
+            background-color: $white;
+        }
+    }
+    &.g-radio-v4 {
+        input:checked + .g-radio-handle {
+            background-color: $primary;
+        }
+        input:checked + .g-radio-handle:after {
+            background-color: transparent;
+        }
+    }
+}
+
+
+//  Radio Switch  / Toggle
+//
+
+.radio-switch {
+    position: relative;
+    font-size: 0;
+    display: inline-flex;
+    align-items: center;
+    .switch-box {
+        position: relative;
+        padding:0 20px;
+    }
+    input {
+        position: absolute;
+        z-index: 2;
+        opacity: 0;
+        cursor: pointer;
+        height: 20px;
+        width: 50px;
+        top: 0;
+        left:0;
+        right:0;
+        margin-left:auto;
+        margin-right:auto;
+        &:checked {
+            z-index: 1;
+        }
+        &:checked + label {
+            opacity: 1;
+            cursor: default;
+        }
+        &:not(:checked) + label:hover {
+
+        }
+    }
+    label {
+        color: #b8bac0;
+        cursor: pointer;
+        //padding:0.5rem 1rem;
+        font-size: 1rem;
+        margin: 0;
+        text-align: center;
+        &.radio-selected {
+            color:$primary;
+        }
+    }
+    .toggle-outside {
+        border-radius: 50px;
+        overflow: hidden;
+        transition: 0.25s ease all;
+        background: #eeeeee;
+        width: 50px;
+        height:20px;
+        margin:0 5px;
+        position:relative;
+    }
+    .toggle-inside {
+        border-radius: 50%;
+        background: $primary;
+        position: absolute;
+        transition: 0.25s ease all;
+        height: 16px;
+        width: 16px;
+        margin-left:2px;
+        margin-top:2px;
+    }
+    input:checked ~ .toggle-outside .toggle-inside {
+        left: 0px;
+    }
+    input ~ input:checked ~ .toggle-outside .toggle-inside {
+        left: 30px;
+    }
+}
+

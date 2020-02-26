@@ -1,0 +1,126 @@
+
+/*
+    @
+    @   [Animated ] Scroll Buttons
+    @
+*/
+
+
+//  Scroll Up Window
+//  Icon button that appears in right-bottom corner of a page.
+//  ------------------------------------------------------------------------------------------------
+
+#scrollUp {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index: 9999;
+    display: none;
+    -webkit-backface-visibility: hidden;
+    -webkit-font-smoothing: antialiased;
+    span {
+        color: #000000;
+        font-size: 0.875rem;
+        border:1px solid #ebebeb;
+        background-color: #EBEBEB;
+        width:40px;
+        height:40px;
+        border-radius:50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &:hover {
+            background-color: theme-color("primary");
+            color:#ffffff;
+            border:1px solid darken(theme-color("primary"), 3%);
+        }
+    }
+}
+
+//  Scroll Down Button
+//  This is used in banners to scroll down to nearest / next section
+//  ------------------------------------------------------------------------------------------------
+
+.scroll-btn {
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom:0px;
+    text-align: center;
+    z-index: 99;
+    .mouse-icon {
+        position: relative;
+        display: block;
+        width: 25px;
+        height: 40px;
+        margin: 0 auto 20px;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        border: 2px solid rgba(0,0,0, 0.5);
+        border-radius: 23px;
+        &:hover,
+        &:focus,
+        &.active {
+            color: #ffffff;
+        }
+        & > .scroll-dot {
+            position: absolute;
+            display: block;
+            top: 10%;
+            left: 49%;
+            width: 1px;
+            height: 10px;
+            margin: -1px 0 0 -1px;
+            border: 1px solid rgba(0,0,0, 0.5);
+            -webkit-animation: mouse-animation 1.5s linear infinite;
+            -moz-animation: mouse-animation 1.5s linear infinite;
+            animation: mouse-animation 1.5s linear infinite;
+        }
+        &:after {
+            position: absolute;
+            top:-20px;
+            bottom: 100%;
+            left: 50%;
+            width: 18px;
+            height: 18px;
+            content: '';
+            margin-left: -3px;
+            border-top: 2px solid rgba(0,0,0, 0.5);
+            border-left:  2px solid rgba(0,0,0, 0.5);
+            box-sizing: border-box;
+            border-top-left-radius: 30px;
+        }
+    }
+}
+
+@-webkit-keyframes mouse-animation {
+    0% {
+        opacity: 1;
+        top: 10%;
+    }
+    50% {
+        opacity: 0;
+        top: 60%;
+    }
+    100% {
+        opacity: 0;
+        top: 10%;
+    }
+}
+@keyframes mouse-animation {
+    0% {
+        opacity: 1;
+        top: 20%;
+    }
+    50% {
+        opacity: 0;
+        top: 60%;
+    }
+    100% {
+        opacity: 0;
+        top: 20%;
+    }
+}
+

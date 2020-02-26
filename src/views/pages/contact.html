@@ -1,0 +1,102 @@
+{% extends '../_partials/main-layout.html' %}
+{% block page-title %}<title>Restaurant Contact </title> {% endblock %}
+{%- set current_page = 'Contact Us' -%}
+{% block content %}
+<!-- Main Wrapper -->
+
+<div class="main-wrapper">
+
+    <!-- Header -->
+    <header id="header" class="g-header position-absolute g-py-30">
+
+        <!-- Navbar -->
+        <div class="g-navbar-wrapper g-navbar-ribbon ribbon-light g-navbar-white-color bg-transparent scrollspy-v1">
+            {% include '../_partials/navbar.html' %}
+        </div>
+        <!-- END Navbar -->
+
+    </header>
+    <!-- END Header -->
+
+    <!-- Main Content -->
+    <div id="main-content">
+
+        <!-- Page Banner -->
+        {% include '../_partials/page-header-breadcrumb.html' %}
+        <!-- END Page Banner -->
+
+        <!-- Info -->
+        <section class="contact-info g-py-100">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 text-center g-mb-25 g-mb-md-0">
+                        <div class="icon-contact-info g-mb-20">
+                            <i class="icon-envelope-letter g-font-size-40 g-text-primary g-mb-20"></i>
+                        </div>
+                        <p class="font-weight-bold g-font-size-22">Email</p>
+                        <p>johndoe@gmail.com</p>
+                        <p>support@your-domain.com</p>
+                    </div>
+                    <div class="col-md-4 text-center g-mb-25 g-mb-md-0">
+                        <div class="icon-contact-info g-mb-20">
+                            <i class="icon-map g-font-size-40 g-text-primary g-mb-20"></i>
+                        </div>
+                        <p class="font-weight-bold g-font-size-22">Address</p>
+                        <p>54 Duncan Street, London N1 8BW</p>
+                        <p>United Kingdom</p>
+                    </div>
+                    <div class="col-md-4 text-center g-mb-25 g-mb-md-0">
+                        <div class="icon-contact-info g-mb-20">
+                            <i class="icon-phone g-font-size-40 g-text-primary"></i>
+                        </div>
+                        <p class="font-weight-bold g-font-size-22">Phone</p>
+                        <p>+21 12345 6789</p>
+                        <p>+21 98765 4321</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End Info -->
+
+        <!-- Contact -->
+        <section class="g-pb-100">
+            <div class="container">
+                <div class="section-title text-center g-mb-70">
+                    <h2 class="font-dancing g-font-size-sm-50 g-mb-20 g-heading-v1-center">Contact Us</h2>
+                    <div class="row justify-content-center">
+                        <div class="col-md-8">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia, quaerat!</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga illo iste itaque officiis pariatur reprehenderit.</p>
+                        </div>
+                    </div>
+                </div>
+                {% include '../_partials/contact-form.html' %}
+            </div>
+        </section>
+        <!-- Contact -->
+
+        <!-- Google Map -->
+        <section id="map" class="g-h700 brush-effect-top brush-effect-bottom"></section>
+        <!-- END Google Map -->
+
+        <!-- Footer -->
+        <div class="brush-effect-top">
+            {% include '../_partials/footer.html' %}
+        </div>
+        <!-- END Footer -->
+
+    </div>
+    <!-- END Main Content -->
+
+</div>
+
+<!-- END Main Wrapper -->
+{% endblock %}
+{% block additional-footer-scripts %}
+
+<script src="assets/js/googleMap.js"></script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyClg_upfe2WXD7SBTQu6EHe0LwT-YCfZnI&callback=initMap"></script>
+
+{% endblock %}
+
+

@@ -1,0 +1,207 @@
+{% extends '../_partials/main-layout.html' %}
+{% block page-title %}<title>Restaurant About </title> {% endblock %}
+{%- set current_page = 'About' -%}
+{% block content %}
+<!-- Main Wrapper -->
+
+<div class="main-wrapper">
+
+    <!-- Header -->
+    <header id="header" class="g-header position-absolute g-py-30">
+
+        <!-- Navbar -->
+        <div class="g-navbar-wrapper g-navbar-ribbon ribbon-light g-navbar-white-color bg-transparent scrollspy-v1">
+            {% include '../_partials/navbar.html' %}
+        </div>
+        <!-- END Navbar -->
+
+    </header>
+    <!-- END Header -->
+
+    <!-- Main Content -->
+    <div id="main-content">
+
+        <!-- Page Banner -->
+        {% include '../_partials/page-header-breadcrumb.html' %}
+        <!-- END Page Banner -->
+
+        <!-- Features -->
+        <section class="g-pt-80 g-pb-30 position-relative bg-cover bg-fixed text-center text-md-left">
+            <div class="container">
+                <div class="row align-items-center justify-content-center g-mb-100">
+                    <div class="col-md-8">
+                        <h1 class="font-dancing g-font-size-sm-45 g-text-primary g-mb-20">Our Restaurant</h1>
+                        <h2 class="g-mb-20">The Right Ingredients <br> for the Right Food.</h2>
+                        <p class="text-muted g-mb-30">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut cum dolorum error sint soluta! Animi, blanditiis commodi nam necessitatibus omnis similique sint tempora totam unde!</p>
+                        <a href="#" class="btn g-btn-lg-md g-btn-primary g-mb-15 g-mb-sm-0 g-mr-sm-15 g-rounded-50"><i class="icon-note g-mr-5"></i> <span>Reservations</span></a>
+                        <a href="#" class="btn g-btn-lg-md g-btn-outline-bluegray-darken-4 g-mb-15 g-mb-sm-0 g-mr-sm-15 g-rounded-50">
+                            <i class="icon-social-youtube g-mr-5 g-font-size-20 align-middle"></i>
+                            <span class="align-middle">See our story</span>
+                        </a>
+                    </div>
+                    <div class="col-md-4">
+                        <p class="text-md-right g-mt-100 g-mt-md-0">
+                            <img class="img-fluid" src="assets/images/donut.png" width="350" style="transform: rotate(-45deg);">
+                        </p>
+                    </div>
+                </div>
+                <div class="row g-mb-50">
+                    <div class="col-sm-6 col-lg-3 g-mb-40 g-mb-lg-0">
+                        <!-- Feature Wrapper -->
+                        <div class="feature-wrapper text-center">
+                            <div class="feature-header">
+                                <div class="icon-wrapper">
+                                    <i class="icon-directions g-font-size-45"></i>
+                                </div>
+                            </div>
+                            <div class="feature-body g-pt-20">
+                                <div class="title g-mb-20">
+                                    <h5 class="font-weight-semibold">Catering</h5>
+                                </div>
+                                <p class="g-mx-10 g-mx-md-30"> Grandis, emeritis bullas tandem promissio de festus, clemens cotta. A falsis, decor peritus burgus.  </p>
+                            </div>
+                        </div>
+                        <!-- END Feature Wrapper -->
+                    </div>
+                    <div class="col-sm-6 col-lg-3 g-mb-40 g-mb-lg-0">
+                        <!-- Feature Wrapper -->
+                        <div class="feature-wrapper text-center">
+                            <div class="feature-header">
+                                <div class="icon-wrapper">
+                                    <i class="icon-badge g-font-size-45"></i>
+                                </div>
+                            </div>
+                            <div class="feature-body g-pt-20">
+                                <div class="title g-mb-20">
+                                    <h5 class="font-weight-semibold">Wine Collection</h5>
+                                </div>
+                                <p class="g-mx-10 g-mx-md-30"> Grandis, emeritis bullas tandem promissio de festus, clemens cotta. A falsis, decor peritus burgus.  </p>
+                            </div>
+                        </div>
+                        <!-- END Feature Wrapper -->
+                    </div>
+                    <div class="col-sm-6 col-lg-3 g-mb-40 g-mb-lg-0">
+                        <!-- Feature Wrapper -->
+                        <div class="feature-wrapper text-center">
+                            <div class="feature-header">
+                                <div class="icon-wrapper">
+                                    <i class="icon-bag g-font-size-45"></i>
+                                </div>
+                            </div>
+                            <div class="feature-body g-pt-20">
+                                <div class="title g-mb-20">
+                                    <h5 class="font-weight-semibold">Custom Orders</h5>
+                                </div>
+                                <p class="g-mx-10 g-mx-md-30"> Grandis, emeritis bullas tandem promissio de festus, clemens cotta. A falsis, decor peritus burgus.  </p>
+                            </div>
+                        </div>
+                        <!-- END Feature Wrapper -->
+                    </div>
+                    <div class="col-sm-6 col-lg-3">
+                        <!-- Feature Wrapper -->
+                        <div class="feature-wrapper text-center">
+                            <div class="feature-header">
+                                <div class="icon-wrapper">
+                                    <i class="icon-home g-font-size-45"></i>
+                                </div>
+                            </div>
+                            <div class="feature-body g-pt-20">
+                                <div class="title g-mb-20">
+                                    <h5 class="font-weight-semibold">Catering</h5>
+                                </div>
+                                <p class="g-mx-10 g-mx-md-30"> Grandis, emeritis bullas tandem promissio de festus, clemens cotta. A falsis, decor peritus burgus.  </p>
+                            </div>
+                        </div>
+                        <!-- END Feature Wrapper -->
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-md-8">
+                        <p class="text-center">
+                            <img class="img-fluid" src="assets/images/cooking-ingredients.png" alt="Image Description">
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- END Features -->
+
+        <!-- About -->
+        <section class="about g-bg-gray-lighten-4 g-pt-120 brush-effect-bottom brush-effect-top position-relative g-text-white bg-fixed" style="background: url('assets/images/11.jpg');">
+            <div class="overlay g-bg-dark-opacity-9"></div>
+            <div class="container">
+                <div class="row justify-content-center justify-content-lg-between">
+                    <div class="col-lg-6">
+                        <div class="d-flex align-items-center h-100 g-pb-80">
+                            <div class="text-center text-lg-left">
+                                <div class="section-title g-mb-30">
+                                    <h1 class="font-dancing g-font-size-sm-45 g-mb-0">Best Food</h1>
+                                    <h2 class="g-heading-v2">From our chief cook</h2>
+                                </div>
+                                <p class="text-muted g-mb-10">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad amet, animi consectetur culpa dolores earum, eligendi est eum facilis fuga iure minima molestiae neque numquam quam recusandae saepe sit voluptas!</p>
+                                <p class="text-muted g-mb-10">Lorem ipsum dolor sit amet, consectetur adipisicing elit. At atque delectus earum facere facilis magnam.</p>
+                                <p>
+                                    <img class="signature img-fluid" src="assets/images/signature-white.png" alt="Image Description" width="200">
+                                </p>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="col-sm-8 col-lg-5">
+                        <div class="g-flex-center">
+                            <p class="text-right"><img class="img-fluid" src="assets/images/staff-1.png" alt="Image Descriprion"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- END About -->
+
+        <!-- Team -->
+        <section class="g-py-80">
+            <div class="container">
+                <div class="section-title text-center g-mb-70">
+                    <h2 class="font-dancing g-font-size-sm-45 g-mb-20 g-heading-v1-center">Our Staff</h2>
+                    <div class="row justify-content-center">
+                        <div class="col-md-8">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, earum.</p>
+                        </div>
+                    </div>
+                </div>
+                {% include '../_partials/team.html' %}
+            </div>
+        </section>
+        <!-- END Team -->
+
+        <!-- Testimonials -->
+        <section class="g-py-150 g-bg-gray-lighten-4 brush-effect-bottom brush-effect-top ">
+            <div class="container">
+                <div class="section-title text-center g-mb-70">
+                    <h2 class="font-dancing g-font-size-sm-45 g-mb-20 g-heading-v1-center">Testimonials</h2>
+                    <div class="row justify-content-center">
+                        <div class="col-md-8">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, earum.</p>
+                        </div>
+                    </div>
+                </div>
+                {% include '../_partials/testimonials.html' %}
+            </div>
+        </section>
+        <!-- END Testimonials -->
+
+        <!-- Footer -->
+        <div class="brush-effect-top">
+            {% include '../_partials/footer.html' %}
+        </div>
+        <!-- END Footer -->
+
+
+    </div>
+    <!-- END Main Content -->
+
+</div>
+
+<!-- END Main Wrapper -->
+{% endblock %}
+{% block additional-footer-scripts %}{% endblock %}

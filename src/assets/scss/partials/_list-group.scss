@@ -1,0 +1,77 @@
+/*
+
+    @
+    @   22. LIST / LIST-GROUPS
+    @
+    
+*/
+
+ul.list-striped li:nth-of-type(odd) {
+    background-color: #f7f8f9;
+}
+
+.list-group-item {
+    color: #111111;
+    @include hover-focus {
+        color: color-yiq($list-group-hover-bg);
+        background-color: $list-group-hover-bg;
+        border-color:darken($list-group-hover-bg, 2%);
+        @include transition(.2s);
+    }
+    
+    &.active {
+        @include hover-focus {
+            color: color-yiq($list-group-active-bg);
+            background-color: $list-group-active-bg;
+            border-color: darken($list-group-active-bg, 2%);
+        }
+        .bagde {
+            background-color: $white !important;
+            color: #111111;
+        }
+    }
+    &.disabled {
+        @include hover-focus {
+            color: $list-group-disabled-color;
+            background-color: $list-group-disabled-bg;
+            border-color: darken($list-group-disabled-bg, 2%);
+        }
+    }
+}
+
+.nomarked-item {
+    background-color: #f2f2f2;
+}
+
+
+.dropdown-notifications {
+    &.dropdown-menu {
+        border-color:#f3f3f3;
+        .dropdown-item {
+            color: $bluegray-600 !important;
+            //padding: 3px 10px;
+            font-size:14px;
+            &:hover {
+                //color:#ffffff !important;
+            }
+        }
+    }
+}
+
+
+
+.list-group-colors {
+
+    .list-group-item {
+        color:$dark;
+        &:hover {
+            border: 1px solid #eeeeee;
+        }
+        &.active,
+        &:active {
+            background-color: theme-color("dark");
+            color:#ffffff !important;
+            border: 1px solid theme-color("dark");
+        }
+    }
+}

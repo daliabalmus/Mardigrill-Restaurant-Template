@@ -1,0 +1,320 @@
+
+/*
+    @
+    @   28. PROGRESS BAR
+    @       27.1 STYLE 1
+    @       27.2 STYLE 2
+    @       27.3 SIZES
+    @       27.4 CIRCLES
+    @       27.5 PROGRESS STEPS
+    @
+*/
+
+.progress {
+    height: $progressbar-size-4;
+	margin-bottom:30px;
+	overflow: visible;
+    .progress-bar {
+        width: 0;
+    }
+    &.progress-rounded {
+        border-radius:50px;
+        .progress-bar {
+            border-radius:50px;
+        }
+    }
+
+    &.progress-v2 {
+        padding: 3px;
+        background-color: $dark;
+        box-sizing: content-box;
+        &.progress-size-1 {
+            height: $progressbar-size-1;
+        }
+        &.progress-size-2 {
+            height: $progressbar-size-2;
+        }
+        &.progress-size-3 {
+            height: $progressbar-size-3;
+        }
+        &.progress-size-4 {
+            height: $progressbar-size-4;
+        }
+        &.progress-size-5 {
+            height: $progressbar-size-5;
+        }
+
+        .progress-bar {
+
+        }
+    }
+    /*
+        27.1
+        STYLE 1
+        ---------------------------------------------------------------------------------------------
+    */
+	&.progress-tooltip-v1 {
+		.progress-bar {
+			position: relative;
+			.tooltiptext {
+				min-width:60px;
+				background-color:$dark;
+				color: #ffffff;
+				text-align: center;
+				padding: 5px 10px;
+				font-size:14px;
+				position: absolute;
+				z-index:100;
+				right:-30px !important;
+				bottom:100%;
+				margin-bottom:10px;
+                opacity:0;
+				&:after {
+					content: "";
+					position: absolute;
+					top: 100%;
+					left: 50%;
+					margin-left: -5px;
+					border-width: 5px;
+					border-style: solid;
+					border-color: $dark transparent transparent transparent;
+				}
+			}
+		}
+	}
+    /*
+         27.2
+         STYLE 2
+         ---------------------------------------------------------------------------------------------
+    */
+	&.progress-tooltip-v2 {
+		position: relative;
+		.progress-bar {
+			.tooltiptext {
+				color: #333333;
+				text-align: center;
+				padding: 0;
+				font-size:.875rem;
+				position: absolute;
+				z-index:100;
+				right:0px !important;
+				bottom:100%;
+				margin-bottom:0px;
+				border-radius:5px;
+
+			}
+		}
+
+	}
+}
+
+/*
+    27.3
+    SIZES
+    -------------------------------------------------------------------------------------------------
+ */
+.progress {
+    &.progress-size-1 {
+        height: $progressbar-size-1;
+    }
+    &.progress-size-2 {
+        height: $progressbar-size-2;
+    }
+    &.progress-size-3 {
+        height: $progressbar-size-3;
+    }
+    &.progress-size-4 {
+        height: $progressbar-size-4;
+    }
+    &.progress-size-5 {
+        height: $progressbar-size-5;
+    }
+}
+
+
+/*
+    27.4
+    CIRCLES
+    -------------------------------------------------------------------------------------------------
+*/
+.progress-circle {
+    .circle {
+        position: relative !important;
+        margin-left:auto;
+        margin-right:auto;
+        display: inline-block;
+
+        .circle-percentage {
+            top: 50%;
+            left: 50%;
+            position:absolute;
+            margin-right: -50%;
+            -webkit-transform: translate(-50%, -50%);
+            -moz-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            margin-top:-2px;
+            font-size:1.7rem;
+            .perc {
+                //font-size:2.1rem;
+
+            }
+        }
+    }
+
+}
+
+/*
+    27.5
+    PROGRESS STEPS
+    -------------------------------------------------------------------------------------------------
+*/
+.step {
+    width:100%;
+	position: relative;
+    text-align: center;
+    .step-title {
+        color: #545454;
+    }
+	.step-icon-wrap {
+		text-align: center;
+		position: relative;
+		margin-bottom: 15px;
+		z-index: 2;
+
+		.step-icon {
+			z-index: 2;
+			background-color: $progress-step-bg;
+			color: $progress-step-icon-color;
+			position: relative;
+			border-radius:50%;
+			width:50px;
+			height:50px;
+            display:inline-flex;
+            align-items: center;
+            justify-content: center;
+		}
+
+		&:before,
+		&:after {
+			position: absolute;
+			top: 50%;
+			margin-top: 0px;
+			width: 50%;
+			height:2px;
+			background-color: $progress-step-line-color;
+			content: '';
+			z-index: -1;
+		}
+		&:before {
+			left:0;
+		}
+		&:after {
+			right: 0;
+		}
+		@include media-breakpoint-down(sm) {
+			&:before,
+			&:after {
+				display: none;
+			}
+		}
+	}
+
+	&:first-child .step-icon-wrap:before,
+	&:last-child .step-icon-wrap:after {
+		display: none;
+	}
+	&.completed {
+		.step-icon {
+			background-color: $progress-step-active-color !important;
+			border-color: $progress-step-active-color !important;
+			color: color-yiq($progress-step-active-color) !important;
+			i {
+				color: color-yiq($progress-step-active-color) !important;
+			}
+		}
+		.step-icon-wrap:before,
+		.step-icon-wrap:after {
+			background-color: $progress-step-active-color;
+		}
+	}
+
+}
+
+
+.progress-steps-v1 {
+    .step-item {
+        transition-duration: .3s;
+        width:200px;
+        height: 200px;
+        background-color: $white;
+        z-index: 999;
+        position: relative;
+        border-radius: 20px;
+        border: 1px solid $gray-300;
+        left: 50%;
+        transform: translateX(-50%);
+        &:after,
+        &:before{
+        }
+    }
+    .step-icon-wrap {
+        transition-duration: .3s;
+        @include media-breakpoint-down(md) {
+            &:before,
+            &:after {
+                display: block;
+                position: absolute;
+                top: 100%;
+                width: 3px;
+                height: 50%;
+                margin-left: -3px;
+                background-color: #eeeeee;
+                content: '';
+                z-index: 1;
+            }
+            &:before {
+                display: none;
+            }
+            &:after {
+                left: 50%;
+            }
+        }
+    }
+}
+
+
+.progress-steps-v2 {
+    .step {
+        .step-icon-wrap:before,
+        .step-icon-wrap:after {
+            position: absolute;
+            top: 50%;
+            margin-top: 0px;
+            width: 50%;
+            border-bottom:2px dashed $bluegray-500;
+            background-color: transparent !important;
+            content: '';
+            z-index: -1;
+        }
+        .step-icon-wrap {
+            &:after {
+                right:3px;
+            }
+        }
+        .step-icon {
+            width: 100px;
+            height:100px;
+            background-color: $white;
+            border: 2px dashed $bluegray-500;
+            transition: 0.1s ease-in-out;
+            cursor:pointer;
+            i {
+                font-size:2rem;
+                color: $bluegray-500;
+            }
+
+        }
+    }
+}
+
+

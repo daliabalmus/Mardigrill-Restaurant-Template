@@ -1,0 +1,999 @@
+{% extends '../_partials/main-layout.html' %}
+{% block page-title %}<title>Restaurant Homepage</title> {% endblock %}
+{% block content %}
+<!-- Main Wrapper -->
+<div class="main-wrapper">
+
+    <!-- Header -->
+    <header id="header" class="g-header g-py-30">
+
+        <!-- Navbar -->
+        <div class="g-navbar-wrapper g-navbar-ribbon g-navbar-white-color bg-transparent sticky-dark scrollspy-v1">
+            {% include '../_partials/navbar.html' %}
+        </div>
+        <!-- END Navbar -->
+
+    </header>
+    <!-- END Header -->
+
+    <!-- Main Content -->
+    <div id="main-content">
+        <!-- Banner -->
+        <section class="banner fullscreen fullscreen-height-auto bg-cover-bottom bg-fixed brush-effect-bottom" style="background-image: url('assets/images/banner3.jpg')">
+            <div class="container h-100">
+                <div class="row align-items-center h-100">
+                    <div class="col-md-8 col-lg-6">
+                            <h1 class="font-dancing g-text-primary g-font-size-35 g-font-size-md-55 g-mb-30">Mardigrill Restaurant</h1>
+                        <h2 class="font-montserrat font-weight-bold text-uppercase g-font-size-20 g-font-size-md-25 g-mb-30">Loves Healthy Food</h2>
+                        <p class="g-mb-30">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vel volutpat felis,
+                            eu condimentum. lorem ipsum dolor. lorem ipsum dolor sit amt.</p>
+                        <div>
+                            <a href="#" class="btn g-btn-lg-lg g-btn-primary g-mb-10 g-mb-sm-0 g-mb-xs-0 g-mr-sm-15 g-rounded-50"><i class="icon-note g-mr-5"></i> <span>Reservations</span></a>
+                            <a href="#" class="btn g-btn-lg-lg g-btn-outline-dark g-mb-10 g-mb-sm-0 g-rounded-50"><i class="icon-fire g-mr-5"></i> <span>View Menu</span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- END Banner -->
+
+        <!-- Features -->
+        <section class="g-pt-100 g-pb-30 position-relative bg-cover bg-fixed text-center text-md-left">
+            <div class="container">
+                <div class="row align-items-center justify-content-center g-mb-100">
+                    <div class="col-md-8">
+                        <h1 class="font-dancing g-font-size-sm-45 g-text-primary g-mb-30">Our Restaurant</h1>
+                        <h2 class="g-mb-30 g-font-size-sm-25">The Right Ingredients for the Right Food.</h2>
+                        <p class="text-muted g-mb-30">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut cum dolorum error sint soluta! Animi, blanditiis commodi nam necessitatibus omnis similique sint tempora totam unde!</p>
+                        <a href="#" class="btn g-btn-lg-md g-btn-primary g-mb-15 g-mb-sm-0 g-mr-sm-15 g-rounded-50"><i class="icon-note g-mr-5"></i> <span>Reservations</span></a>
+                        <a href="#" class="btn g-btn-lg-md g-btn-outline-bluegray-darken-4 g-mb-15 g-mb-sm-0 g-mr-sm-15 g-rounded-50">
+                            <i class="icon-social-youtube g-mr-5 g-font-size-20 align-middle"></i>
+                            <span class="align-middle">See our story</span>
+                        </a>
+                    </div>
+                    <div class="col-md-4">
+                        <p class="text-md-right g-mt-100 g-mt-md-0">
+                            <img class="img-fluid" src="assets/images/donut.png" width="350" style="transform: rotate(-45deg);" alt="Image Description">
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- END Features -->
+
+        <!-- Popular Dishes -->
+        <section class="g-py-100 position-relative g-bg-gray-lighten-4">
+            <div class="food-img-top">
+                <img class="g-w250" src="../../assets/images/5.png" alt="Image Description">
+            </div>
+            <div class="food-img-bottom">
+                <img class="g-w200" src="../../assets/images/4.png" alt="Image Description">
+            </div>
+            <div class="container">
+                <div class="section-title text-center g-mb-70">
+                    <h2 class="font-dancing g-font-size-sm-45 g-mb-30 g-heading-v1-center">Our Popular Dishes</h2>
+                    <div class="row justify-content-center">
+                        <div class="col-md-8">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias, veniam!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-sm-6 col-lg-4 g-px-20 g-mb-30 g-mb-lg-0">
+                        <div class="g-bg-white g-py-50 g-shadow-v1">
+                            <div class="text-center">
+                                <img class="img-fluid g-h200 g-mb-30" src="assets/images/1.png" alt="Image Description">
+                                <h5 class="g-mb-30 font-weight-bold">Dish Name Here</h5>
+                                <h4 class="g-text-primary font-weight-bold">$100</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-4 g-px-20 g-mb-30 g-mb-lg-0">
+                        <div class="g-bg-white g-py-50 g-shadow-v1">
+                            <div class="text-center">
+                                <img class="img-fluid g-h200 g-mb-30" src="assets/images/2.png" alt="Image Description">
+                                <h5 class="g-mb-30 font-weight-bold">Dish Name Here</h5>
+                                <h4 class="g-text-primary font-weight-bold">$100</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-4 g-px-20">
+                        <div class="g-bg-white g-py-50 g-shadow-v1">
+                            <div class="text-center">
+                                <img class="img-fluid g-h200 g-mb-30" src="assets/images/3.png" alt="Image Description">
+                                <h5 class="g-mb-30 font-weight-bold">Dish Name Here</h5>
+                                <h4 class="g-text-primary font-weight-bold">$100</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- END Popular Dishes -->
+
+        <!-- Menu -->
+        <section class="g-py-100">
+            <div class="container">
+                <div class="section-title text-center g-mb-70">
+                    <h2 class="font-dancing g-font-size-sm-45 g-mb-20 g-heading-v1-center">Our Menu</h2>
+                    <div class="row justify-content-center">
+                        <div class="col-md-8">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias, veniam!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="tabs-wrapper g-p-0 g-m-0 g-border-0">
+                    <div class="d-flex justify-content-between align-items-center g-shadow-v1 g-mb-50 g-px-15">
+                        <div class="d-none d-md-block">
+                            <img class="g-w150" src="../../assets/images/5.png" alt="Image Description">
+                        </div>
+                        <ul class="nav g-nav-tabs nav-tabs g-p-20 g-p-sm-0 justify-content-center" id="tab-02" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active g-border-0" id="home-tab-02" data-toggle="tab" href="#home-02" role="tab" aria-controls="home-02" aria-selected="true">
+                                    <span class="tab-name text-uppercase">Pizza</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link g-border-0" id="profile-tab-02" data-toggle="tab" href="#profile-02" role="tab" aria-controls="profile-02" aria-selected="false">
+                                    <span class="tab-name text-uppercase">Drinks</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link g-border-0" id="contact-tab-02" data-toggle="tab" href="#contact-02" role="tab" aria-controls="contact-02" aria-selected="false">
+                                    <span class="tab-name text-uppercase">Salads</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link g-border-0" id="settings-tab-02" data-toggle="tab" href="#settings-02" role="tab" aria-controls="settings-02" aria-selected="false">
+                                    <span class="tab-name text-uppercase">Sandwiches</span>
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="d-none d-md-block">
+                            <img class="g-w150" src="../../assets/images/5.png" alt="Image Description">
+                        </div>
+                    </div>
+
+                    <div class="tab-content g-border-0">
+                        <div class="tab-pane fade show active" id="home-02" role="tabpanel">
+                            <div class="row justify-content-center no-gutters">
+                                <div class="col-sm-10 col-md-6 g-px-20">
+                                    <article class="d-flex g-pb-15 g-mb-20">
+                                        <div class="row align-items-center">
+                                            <div class="col-sm-3 text-center g-mb-20 g-mb-sm-0">
+                                                <img class="img-fluid rounded-circle g-shadow-v2" src="assets/images/cake.jpg" alt="Image Description">
+                                            </div>
+                                            <div class="col-sm-9">
+                                                <div class="menu-body">
+                                                    <div class="g-mb-20 g-flex-middle">
+                                                        <div class="menu-title">
+                                                            <h6 class="text-uppercase font-weight-bold">Breakfast</h6>
+                                                        </div>
+                                                        <div class="line-separator g-bg-gray-lighten-3 g-mx-10"></div>
+                                                        <div class="price ml-auto g-px-7 g-py-3 g-rounded-5 g-bg-primary">
+                                                            <span class="g-font-size-12">10$</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <p class="text-muted">( Two eggs cooked to order with grits, sawmill gravy, homemade buttermilk biscuits & real butter ) </p>
+                                            </div>
+                                        </div>
+                                    </article>
+                                    <article class="d-flex g-pb-15 g-mb-20">
+                                        <div class="row align-items-center">
+                                            <div class="col-sm-3 text-center g-mb-20 g-mb-sm-0">
+                                                <img class="img-fluid rounded-circle g-shadow-v2" src="assets/images/donut.jpg" alt="Image Description">
+                                            </div>
+                                            <div class="col-sm-9">
+                                                <div class="menu-body">
+                                                    <div class="g-mb-20 g-flex-middle">
+                                                        <div class="menu-title">
+                                                            <h6 class="text-uppercase font-weight-bold">Breakfast</h6>
+                                                        </div>
+                                                        <div class="line-separator g-bg-gray-lighten-3 g-mx-10"></div>
+                                                        <div class="price ml-auto g-px-7 g-py-3 g-rounded-5 g-bg-primary">
+                                                            <span class="g-font-size-12">10$</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <p class="text-muted">( Two eggs cooked to order with grits, sawmill gravy, homemade buttermilk biscuits & real butter ) </p>
+                                            </div>
+                                        </div>
+                                    </article>
+                                    <article class="d-flex g-pb-15 g-mb-20">
+                                        <div class="row align-items-center">
+                                            <div class="col-sm-3 text-center g-mb-20 g-mb-sm-0">
+                                                <img class="img-fluid rounded-circle g-shadow-v2" src="assets/images/soup.jpg" alt="Image Description">
+                                            </div>
+                                            <div class="col-sm-9">
+                                                <div class="menu-body">
+                                                    <div class="g-mb-20 g-flex-middle">
+                                                        <div class="menu-title">
+                                                            <h6 class="text-uppercase font-weight-bold">Breakfast</h6>
+                                                        </div>
+                                                        <div class="line-separator g-bg-gray-lighten-3 g-mx-10"></div>
+                                                        <div class="price ml-auto g-px-7 g-py-3 g-rounded-5 g-bg-primary">
+                                                            <span class="g-font-size-12">10$</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <p class="text-muted">( Two eggs cooked to order with grits, sawmill gravy, homemade buttermilk biscuits & real butter ) </p>
+                                            </div>
+                                        </div>
+                                    </article>
+                                </div>
+                                <div class="col-sm-10 col-md-6 g-px-20">
+                                    <article class="d-flex g-pb-15 g-mb-20">
+                                        <div class="row align-items-center">
+                                            <div class="col-sm-3 text-center g-mb-20 g-mb-sm-0">
+                                                <img class="img-fluid rounded-circle g-shadow-v2" src="assets/images/soup.jpg" alt="Image Description">
+                                            </div>
+                                            <div class="col-sm-9">
+                                                <div class="menu-body">
+                                                    <div class="g-mb-20 g-flex-middle">
+                                                        <div class="menu-title">
+                                                            <h6 class="text-uppercase font-weight-bold">Breakfast</h6>
+                                                        </div>
+                                                        <div class="line-separator g-bg-gray-lighten-3 g-mx-10"></div>
+                                                        <div class="price ml-auto g-px-7 g-py-3 g-rounded-5 g-bg-primary">
+                                                            <span class="g-font-size-12">10$</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <p class="text-muted">( Two eggs cooked to order with grits, sawmill gravy, homemade buttermilk biscuits & real butter ) </p>
+                                            </div>
+                                        </div>
+                                    </article>
+                                    <article class="d-flex g-pb-15 g-mb-20">
+                                        <div class="row align-items-center">
+                                            <div class="col-sm-3 text-center g-mb-20 g-mb-sm-0">
+                                                <img class="img-fluid rounded-circle g-shadow-v2" src="assets/images/donut.jpg" alt="Image Description">
+                                            </div>
+                                            <div class="col-sm-9">
+                                                <div class="menu-body">
+                                                    <div class="g-mb-20 g-flex-middle">
+                                                        <div class="menu-title">
+                                                            <h6 class="text-uppercase font-weight-bold">Breakfast</h6>
+                                                        </div>
+                                                        <div class="line-separator g-bg-gray-lighten-3 g-mx-10"></div>
+                                                        <div class="price ml-auto g-px-7 g-py-3 g-rounded-5 g-bg-primary">
+                                                            <span class="g-font-size-12">10$</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <p class="text-muted">( Two eggs cooked to order with grits, sawmill gravy, homemade buttermilk biscuits & real butter ) </p>
+                                            </div>
+                                        </div>
+                                    </article>
+                                    <article class="d-flex g-pb-15 g-mb-20">
+                                        <div class="row align-items-center">
+                                            <div class="col-sm-3 text-center g-mb-20 g-mb-sm-0">
+                                                <img class="img-fluid rounded-circle g-shadow-v2" src="assets/images/cake.jpg" alt="Image Description">
+                                            </div>
+                                            <div class="col-sm-9">
+                                                <div class="menu-body">
+                                                    <div class="g-mb-20 g-flex-middle">
+                                                        <div class="menu-title">
+                                                            <h6 class="text-uppercase font-weight-bold">Breakfast</h6>
+                                                        </div>
+                                                        <div class="line-separator g-bg-gray-lighten-3 g-mx-10"></div>
+                                                        <div class="price ml-auto g-px-7 g-py-3 g-rounded-5 g-bg-primary">
+                                                            <span class="g-font-size-12">10$</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <p class="text-muted">( Two eggs cooked to order with grits, sawmill gravy, homemade buttermilk biscuits & real butter ) </p>
+                                            </div>
+                                        </div>
+                                    </article>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="profile-02" role="tabpanel">
+                            <div class="row justify-content-center no-gutters">
+                                <div class="col-sm-10 col-md-6 g-px-20">
+                                    <article class="d-flex g-pb-15 g-mb-20">
+                                        <div class="row align-items-center">
+                                            <div class="col-sm-3 text-center g-mb-20 g-mb-sm-0">
+                                                <img class="img-fluid rounded-circle g-shadow-v2" src="assets/images/cake.jpg" alt="Image Description">
+                                            </div>
+                                            <div class="col-sm-9">
+                                                <div class="menu-body">
+                                                    <div class="g-mb-20 g-flex-middle">
+                                                        <div class="menu-title">
+                                                            <h6 class="text-uppercase font-weight-bold">Breakfast</h6>
+                                                        </div>
+                                                        <div class="line-separator g-bg-gray-lighten-3 g-mx-10"></div>
+                                                        <div class="price ml-auto g-px-7 g-py-3 g-rounded-5 g-bg-primary">
+                                                            <span class="g-font-size-12">10$</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <p class="text-muted">( Two eggs cooked to order with grits, sawmill gravy, homemade buttermilk biscuits & real butter ) </p>
+                                            </div>
+                                        </div>
+                                    </article>
+                                    <article class="d-flex g-pb-15 g-mb-20">
+                                        <div class="row align-items-center">
+                                            <div class="col-sm-3 text-center g-mb-20 g-mb-sm-0">
+                                                <img class="img-fluid rounded-circle g-shadow-v2" src="assets/images/donut.jpg" alt="Image Description">
+                                            </div>
+                                            <div class="col-sm-9">
+                                                <div class="menu-body">
+                                                    <div class="g-mb-20 g-flex-middle">
+                                                        <div class="menu-title">
+                                                            <h6 class="text-uppercase font-weight-bold">Breakfast</h6>
+                                                        </div>
+                                                        <div class="line-separator g-bg-gray-lighten-3 g-mx-10"></div>
+                                                        <div class="price ml-auto g-px-7 g-py-3 g-rounded-5 g-bg-primary">
+                                                            <span class="g-font-size-12">10$</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <p class="text-muted">( Two eggs cooked to order with grits, sawmill gravy, homemade buttermilk biscuits & real butter ) </p>
+                                            </div>
+                                        </div>
+                                    </article>
+                                    <article class="d-flex g-pb-15 g-mb-20">
+                                        <div class="row align-items-center">
+                                            <div class="col-sm-3 text-center g-mb-20 g-mb-sm-0">
+                                                <img class="img-fluid rounded-circle g-shadow-v2" src="assets/images/soup.jpg" alt="Image Description">
+                                            </div>
+                                            <div class="col-sm-9">
+                                                <div class="menu-body">
+                                                    <div class="g-mb-20 g-flex-middle">
+                                                        <div class="menu-title">
+                                                            <h6 class="text-uppercase font-weight-bold">Breakfast</h6>
+                                                        </div>
+                                                        <div class="line-separator g-bg-gray-lighten-3 g-mx-10"></div>
+                                                        <div class="price ml-auto g-px-7 g-py-3 g-rounded-5 g-bg-primary">
+                                                            <span class="g-font-size-12">10$</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <p class="text-muted">( Two eggs cooked to order with grits, sawmill gravy, homemade buttermilk biscuits & real butter ) </p>
+                                            </div>
+                                        </div>
+                                    </article>
+                                </div>
+                                <div class="col-sm-10 col-md-6 g-px-20">
+                                    <article class="d-flex g-pb-15 g-mb-20">
+                                        <div class="row align-items-center">
+                                            <div class="col-sm-3 text-center g-mb-20 g-mb-sm-0">
+                                                <img class="img-fluid rounded-circle g-shadow-v2" src="assets/images/soup.jpg" alt="Image Description">
+                                            </div>
+                                            <div class="col-sm-9">
+                                                <div class="menu-body">
+                                                    <div class="g-mb-20 g-flex-middle">
+                                                        <div class="menu-title">
+                                                            <h6 class="text-uppercase font-weight-bold">Breakfast</h6>
+                                                        </div>
+                                                        <div class="line-separator g-bg-gray-lighten-3 g-mx-10"></div>
+                                                        <div class="price ml-auto g-px-7 g-py-3 g-rounded-5 g-bg-primary">
+                                                            <span class="g-font-size-12">10$</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <p class="text-muted">( Two eggs cooked to order with grits, sawmill gravy, homemade buttermilk biscuits & real butter ) </p>
+                                            </div>
+                                        </div>
+                                    </article>
+                                    <article class="d-flex g-pb-15 g-mb-20">
+                                        <div class="row align-items-center">
+                                            <div class="col-sm-3 text-center g-mb-20 g-mb-sm-0">
+                                                <img class="img-fluid rounded-circle g-shadow-v2" src="assets/images/donut.jpg" alt="Image Description">
+                                            </div>
+                                            <div class="col-sm-9">
+                                                <div class="menu-body">
+                                                    <div class="g-mb-20 g-flex-middle">
+                                                        <div class="menu-title">
+                                                            <h6 class="text-uppercase font-weight-bold">Breakfast</h6>
+                                                        </div>
+                                                        <div class="line-separator g-bg-gray-lighten-3 g-mx-10"></div>
+                                                        <div class="price ml-auto g-px-7 g-py-3 g-rounded-5 g-bg-primary">
+                                                            <span class="g-font-size-12">10$</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <p class="text-muted">( Two eggs cooked to order with grits, sawmill gravy, homemade buttermilk biscuits & real butter ) </p>
+                                            </div>
+                                        </div>
+                                    </article>
+                                    <article class="d-flex g-pb-15 g-mb-20">
+                                        <div class="row align-items-center">
+                                            <div class="col-sm-3 text-center g-mb-20 g-mb-sm-0">
+                                                <img class="img-fluid rounded-circle g-shadow-v2" src="assets/images/cake.jpg" alt="Image Description">
+                                            </div>
+                                            <div class="col-sm-9">
+                                                <div class="menu-body">
+                                                    <div class="g-mb-20 g-flex-middle">
+                                                        <div class="menu-title">
+                                                            <h6 class="text-uppercase font-weight-bold">Breakfast</h6>
+                                                        </div>
+                                                        <div class="line-separator g-bg-gray-lighten-3 g-mx-10"></div>
+                                                        <div class="price ml-auto g-px-7 g-py-3 g-rounded-5 g-bg-primary">
+                                                            <span class="g-font-size-12">10$</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <p class="text-muted">( Two eggs cooked to order with grits, sawmill gravy, homemade buttermilk biscuits & real butter ) </p>
+                                            </div>
+                                        </div>
+                                    </article>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="contact-02" role="tabpanel">
+                            <div class="row justify-content-center no-gutters">
+                                <div class="col-sm-10 col-md-6 g-px-20">
+                                    <article class="d-flex g-pb-15 g-mb-20">
+                                        <div class="row align-items-center">
+                                            <div class="col-sm-3 text-center g-mb-20 g-mb-sm-0">
+                                                <img class="img-fluid rounded-circle g-shadow-v2" src="assets/images/cake.jpg" alt="Image Description">
+                                            </div>
+                                            <div class="col-sm-9">
+                                                <div class="menu-body">
+                                                    <div class="g-mb-20 g-flex-middle">
+                                                        <div class="menu-title">
+                                                            <h6 class="text-uppercase font-weight-bold">Breakfast</h6>
+                                                        </div>
+                                                        <div class="line-separator g-bg-gray-lighten-3 g-mx-10"></div>
+                                                        <div class="price ml-auto g-px-7 g-py-3 g-rounded-5 g-bg-primary">
+                                                            <span class="g-font-size-12">10$</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <p class="text-muted">( Two eggs cooked to order with grits, sawmill gravy, homemade buttermilk biscuits & real butter ) </p>
+                                            </div>
+                                        </div>
+                                    </article>
+                                    <article class="d-flex g-pb-15 g-mb-20">
+                                        <div class="row align-items-center">
+                                            <div class="col-sm-3 text-center g-mb-20 g-mb-sm-0">
+                                                <img class="img-fluid rounded-circle g-shadow-v2" src="assets/images/donut.jpg" alt="Image Description">
+                                            </div>
+                                            <div class="col-sm-9">
+                                                <div class="menu-body">
+                                                    <div class="g-mb-20 g-flex-middle">
+                                                        <div class="menu-title">
+                                                            <h6 class="text-uppercase font-weight-bold">Breakfast</h6>
+                                                        </div>
+                                                        <div class="line-separator g-bg-gray-lighten-3 g-mx-10"></div>
+                                                        <div class="price ml-auto g-px-7 g-py-3 g-rounded-5 g-bg-primary">
+                                                            <span class="g-font-size-12">10$</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <p class="text-muted">( Two eggs cooked to order with grits, sawmill gravy, homemade buttermilk biscuits & real butter ) </p>
+                                            </div>
+                                        </div>
+                                    </article>
+                                    <article class="d-flex g-pb-15 g-mb-20">
+                                        <div class="row align-items-center">
+                                            <div class="col-sm-3 text-center g-mb-20 g-mb-sm-0">
+                                                <img class="img-fluid rounded-circle g-shadow-v2" src="assets/images/soup.jpg" alt="Image Description">
+                                            </div>
+                                            <div class="col-sm-9">
+                                                <div class="menu-body">
+                                                    <div class="g-mb-20 g-flex-middle">
+                                                        <div class="menu-title">
+                                                            <h6 class="text-uppercase font-weight-bold">Breakfast</h6>
+                                                        </div>
+                                                        <div class="line-separator g-bg-gray-lighten-3 g-mx-10"></div>
+                                                        <div class="price ml-auto g-px-7 g-py-3 g-rounded-5 g-bg-primary">
+                                                            <span class="g-font-size-12">10$</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <p class="text-muted">( Two eggs cooked to order with grits, sawmill gravy, homemade buttermilk biscuits & real butter ) </p>
+                                            </div>
+                                        </div>
+                                    </article>
+                                </div>
+                                <div class="col-sm-10 col-md-6 g-px-20">
+                                    <article class="d-flex g-pb-15 g-mb-20">
+                                        <div class="row align-items-center">
+                                            <div class="col-sm-3 text-center g-mb-20 g-mb-sm-0">
+                                                <img class="img-fluid rounded-circle g-shadow-v2" src="assets/images/soup.jpg" alt="Image Description">
+                                            </div>
+                                            <div class="col-sm-9">
+                                                <div class="menu-body">
+                                                    <div class="g-mb-20 g-flex-middle">
+                                                        <div class="menu-title">
+                                                            <h6 class="text-uppercase font-weight-bold">Breakfast</h6>
+                                                        </div>
+                                                        <div class="line-separator g-bg-gray-lighten-3 g-mx-10"></div>
+                                                        <div class="price ml-auto g-px-7 g-py-3 g-rounded-5 g-bg-primary">
+                                                            <span class="g-font-size-12">10$</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <p class="text-muted">( Two eggs cooked to order with grits, sawmill gravy, homemade buttermilk biscuits & real butter ) </p>
+                                            </div>
+                                        </div>
+                                    </article>
+                                    <article class="d-flex g-pb-15 g-mb-20">
+                                        <div class="row align-items-center">
+                                            <div class="col-sm-3 text-center g-mb-20 g-mb-sm-0">
+                                                <img class="img-fluid rounded-circle g-shadow-v2" src="assets/images/donut.jpg" alt="Image Description">
+                                            </div>
+                                            <div class="col-sm-9">
+                                                <div class="menu-body">
+                                                    <div class="g-mb-20 g-flex-middle">
+                                                        <div class="menu-title">
+                                                            <h6 class="text-uppercase font-weight-bold">Breakfast</h6>
+                                                        </div>
+                                                        <div class="line-separator g-bg-gray-lighten-3 g-mx-10"></div>
+                                                        <div class="price ml-auto g-px-7 g-py-3 g-rounded-5 g-bg-primary">
+                                                            <span class="g-font-size-12">10$</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <p class="text-muted">( Two eggs cooked to order with grits, sawmill gravy, homemade buttermilk biscuits & real butter ) </p>
+                                            </div>
+                                        </div>
+                                    </article>
+                                    <article class="d-flex g-pb-15 g-mb-20">
+                                        <div class="row align-items-center">
+                                            <div class="col-sm-3 text-center g-mb-20 g-mb-sm-0">
+                                                <img class="img-fluid rounded-circle g-shadow-v2" src="assets/images/cake.jpg" alt="Image Description">
+                                            </div>
+                                            <div class="col-sm-9">
+                                                <div class="menu-body">
+                                                    <div class="g-mb-20 g-flex-middle">
+                                                        <div class="menu-title">
+                                                            <h6 class="text-uppercase font-weight-bold">Breakfast</h6>
+                                                        </div>
+                                                        <div class="line-separator g-bg-gray-lighten-3 g-mx-10"></div>
+                                                        <div class="price ml-auto g-px-7 g-py-3 g-rounded-5 g-bg-primary">
+                                                            <span class="g-font-size-12">10$</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <p class="text-muted">( Two eggs cooked to order with grits, sawmill gravy, homemade buttermilk biscuits & real butter ) </p>
+                                            </div>
+                                        </div>
+                                    </article>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="settings-02" role="tabpanel">
+                            <div class="row justify-content-center no-gutters">
+                                <div class="col-sm-10 col-md-6 g-px-20">
+                                    <article class="d-flex g-pb-15 g-mb-20">
+                                        <div class="row align-items-center">
+                                            <div class="col-sm-3 text-center g-mb-20 g-mb-sm-0">
+                                                <img class="img-fluid rounded-circle g-shadow-v2" src="assets/images/cake.jpg" alt="Image Description">
+                                            </div>
+                                            <div class="col-sm-9">
+                                                <div class="menu-body">
+                                                    <div class="g-mb-20 g-flex-middle">
+                                                        <div class="menu-title">
+                                                            <h6 class="text-uppercase font-weight-bold">Breakfast</h6>
+                                                        </div>
+                                                        <div class="line-separator g-bg-gray-lighten-3 g-mx-10"></div>
+                                                        <div class="price ml-auto g-px-7 g-py-3 g-rounded-5 g-bg-primary">
+                                                            <span class="g-font-size-12">10$</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <p class="text-muted">( Two eggs cooked to order with grits, sawmill gravy, homemade buttermilk biscuits & real butter ) </p>
+                                            </div>
+                                        </div>
+                                    </article>
+                                    <article class="d-flex g-pb-15 g-mb-20">
+                                        <div class="row align-items-center">
+                                            <div class="col-sm-3 text-center g-mb-20 g-mb-sm-0">
+                                                <img class="img-fluid rounded-circle g-shadow-v2" src="assets/images/donut.jpg" alt="Image Description">
+                                            </div>
+                                            <div class="col-sm-9">
+                                                <div class="menu-body">
+                                                    <div class="g-mb-20 g-flex-middle">
+                                                        <div class="menu-title">
+                                                            <h6 class="text-uppercase font-weight-bold">Breakfast</h6>
+                                                        </div>
+                                                        <div class="line-separator g-bg-gray-lighten-3 g-mx-10"></div>
+                                                        <div class="price ml-auto g-px-7 g-py-3 g-rounded-5 g-bg-primary">
+                                                            <span class="g-font-size-12">10$</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <p class="text-muted">( Two eggs cooked to order with grits, sawmill gravy, homemade buttermilk biscuits & real butter ) </p>
+                                            </div>
+                                        </div>
+                                    </article>
+                                    <article class="d-flex g-pb-15 g-mb-20">
+                                        <div class="row align-items-center">
+                                            <div class="col-sm-3 text-center g-mb-20 g-mb-sm-0">
+                                                <img class="img-fluid rounded-circle g-shadow-v2" src="assets/images/soup.jpg" alt="Image Description">
+                                            </div>
+                                            <div class="col-sm-9">
+                                                <div class="menu-body">
+                                                    <div class="g-mb-20 g-flex-middle">
+                                                        <div class="menu-title">
+                                                            <h6 class="text-uppercase font-weight-bold">Breakfast</h6>
+                                                        </div>
+                                                        <div class="line-separator g-bg-gray-lighten-3 g-mx-10"></div>
+                                                        <div class="price ml-auto g-px-7 g-py-3 g-rounded-5 g-bg-primary">
+                                                            <span class="g-font-size-12">10$</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <p class="text-muted">( Two eggs cooked to order with grits, sawmill gravy, homemade buttermilk biscuits & real butter ) </p>
+                                            </div>
+                                        </div>
+                                    </article>
+                                </div>
+                                <div class="col-sm-10 col-md-6 g-px-20">
+                                    <article class="d-flex g-pb-15 g-mb-20">
+                                        <div class="row align-items-center">
+                                            <div class="col-sm-3 text-center g-mb-20 g-mb-sm-0">
+                                                <img class="img-fluid rounded-circle g-shadow-v2" src="assets/images/soup.jpg" alt="Image Description">
+                                            </div>
+                                            <div class="col-sm-9">
+                                                <div class="menu-body">
+                                                    <div class="g-mb-20 g-flex-middle">
+                                                        <div class="menu-title">
+                                                            <h6 class="text-uppercase font-weight-bold">Breakfast</h6>
+                                                        </div>
+                                                        <div class="line-separator g-bg-gray-lighten-3 g-mx-10"></div>
+                                                        <div class="price ml-auto g-px-7 g-py-3 g-rounded-5 g-bg-primary">
+                                                            <span class="g-font-size-12">10$</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <p class="text-muted">( Two eggs cooked to order with grits, sawmill gravy, homemade buttermilk biscuits & real butter ) </p>
+                                            </div>
+                                        </div>
+                                    </article>
+                                    <article class="d-flex g-pb-15 g-mb-20">
+                                        <div class="row align-items-center">
+                                            <div class="col-sm-3 text-center g-mb-20 g-mb-sm-0">
+                                                <img class="img-fluid rounded-circle g-shadow-v2" src="assets/images/donut.jpg" alt="Image Description">
+                                            </div>
+                                            <div class="col-sm-9">
+                                                <div class="menu-body">
+                                                    <div class="g-mb-20 g-flex-middle">
+                                                        <div class="menu-title">
+                                                            <h6 class="text-uppercase font-weight-bold">Breakfast</h6>
+                                                        </div>
+                                                        <div class="line-separator g-bg-gray-lighten-3 g-mx-10"></div>
+                                                        <div class="price ml-auto g-px-7 g-py-3 g-rounded-5 g-bg-primary">
+                                                            <span class="g-font-size-12">10$</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <p class="text-muted">( Two eggs cooked to order with grits, sawmill gravy, homemade buttermilk biscuits & real butter ) </p>
+                                            </div>
+                                        </div>
+                                    </article>
+                                    <article class="d-flex g-pb-15 g-mb-20">
+                                        <div class="row align-items-center">
+                                            <div class="col-sm-3 text-center g-mb-20 g-mb-sm-0">
+                                                <img class="img-fluid rounded-circle g-shadow-v2" src="assets/images/cake.jpg" alt="Image Description">
+                                            </div>
+                                            <div class="col-sm-9">
+                                                <div class="menu-body">
+                                                    <div class="g-mb-20 g-flex-middle">
+                                                        <div class="menu-title">
+                                                            <h6 class="text-uppercase font-weight-bold">Breakfast</h6>
+                                                        </div>
+                                                        <div class="line-separator g-bg-gray-lighten-3 g-mx-10"></div>
+                                                        <div class="price ml-auto g-px-7 g-py-3 g-rounded-5 g-bg-primary">
+                                                            <span class="g-font-size-12">10$</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <p class="text-muted">( Two eggs cooked to order with grits, sawmill gravy, homemade buttermilk biscuits & real butter ) </p>
+                                            </div>
+                                        </div>
+                                    </article>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- END Menu -->
+
+        <!-- Gallery -->
+        <section class="g-py-100 g-bg-gray-lighten-4 position-relative gallery images-gallery zoom">
+            <div class="food-img-top food-img-top-gallery">
+                <img src="../../assets/images/7.png" alt="Image Description">
+            </div>
+            <div class="food-img-bottom food-img-bottom-gallery">
+                <img src="../../assets/images/8.png" alt="Image Description">
+            </div>
+            <div class="container">
+                <div class="section-title text-center g-mb-70">
+                    <h2 class="font-dancing g-font-size-sm-45 g-mb-20 g-heading-v1-center">Our Gallery</h2>
+                    <div class="row justify-content-center">
+                        <div class="col-md-8">
+                            <p>Checkout Our Place</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row no-gutters justify-content-center">
+
+                    <div class="col-sm-10 col-md-4 g-pb-15 g-pr-md-15">
+                        <div class="gallery-item caption">
+                            <a href="assets/images/1.jpg" class="popup-img" data-toggle="lightbox" data-gallery="example-gallery">
+                                <div class="caption-default ">
+                                    <img src="assets/images/1.jpg" alt="Image Description">
+                                </div>
+                                <div class="caption-active g-bg-primary-opacity-6 g-flex-center">
+                                    <div class="text-center">
+                                        <i class="icon-magnifier-add g-text-white g-font-size-25"></i>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-10 col-md-4 g-pb-15 g-pr-md-15">
+                        <div class="gallery-item caption">
+                            <a href="assets/images/2.jpg" class="popup-img" data-toggle="lightbox" data-gallery="example-gallery">
+                                <div class="caption-default ">
+                                    <img src="assets/images/2.jpg" alt="Image Description">
+                                </div>
+                                <div class="caption-active g-bg-primary-opacity-6 g-flex-center">
+                                    <div class="text-center">
+                                        <i class="icon-magnifier-add g-text-white g-font-size-25"></i>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-10 col-md-4 g-pb-15 g-pr-md-15">
+                        <div class="gallery-item caption">
+                            <a href="assets/images/3.jpg" class="popup-img" data-toggle="lightbox" data-gallery="example-gallery">
+                                <div class="caption-default ">
+                                    <img src="assets/images/3.jpg" alt="Image Description">
+                                </div>
+                                <div class="caption-active g-bg-primary-opacity-6 g-flex-center">
+                                    <div class="text-center">
+                                        <i class="icon-magnifier-add g-text-white g-font-size-25"></i>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-10 col-md-6 g-pb-15 g-pr-md-15">
+                        <div class="gallery-item caption">
+                            <a href="assets/images/4.jpg" class="popup-img" data-toggle="lightbox" data-gallery="example-gallery">
+                                <div class="caption-default ">
+                                    <img src="assets/images/4.jpg" alt="Image Description">
+                                </div>
+                                <div class="caption-active g-bg-primary-opacity-6 g-flex-center">
+                                    <div class="text-center">
+                                        <i class="icon-magnifier-add g-text-white g-font-size-25"></i>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-sm-10 col-md-6 g-pb-15 g-pr-md-15">
+                        <div class="gallery-item caption">
+                            <a href="assets/images/5.jpg" class="popup-img" data-toggle="lightbox" data-gallery="example-gallery">
+                                <div class="caption-default ">
+                                    <img src="assets/images/5.jpg" alt="Image Description">
+                                </div>
+                                <div class="caption-active g-bg-primary-opacity-6 g-flex-center">
+                                    <div class="text-center">
+                                        <i class="icon-magnifier-add g-text-white g-font-size-25"></i>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-10 col-md-4 g-pb-15 g-pr-md-15">
+                        <div class="gallery-item caption">
+                            <a href="assets/images/6.jpg" class="popup-img" data-toggle="lightbox" data-gallery="example-gallery">
+                                <div class="caption-default ">
+                                    <img src="assets/images/6.jpg" alt="Image Description">
+                                </div>
+                                <div class="caption-active g-bg-primary-opacity-6 g-flex-center">
+                                    <div class="text-center">
+                                        <i class="icon-magnifier-add g-text-white g-font-size-25"></i>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-sm-10 col-md-4 g-pb-15 g-pr-md-15">
+                        <div class="gallery-item caption">
+                            <a href="assets/images/7.jpg" class="popup-img" data-toggle="lightbox" data-gallery="example-gallery">
+                                <div class="caption-default ">
+                                    <img src="assets/images/7.jpg" alt="Image Description">
+                                </div>
+                                <div class="caption-active g-bg-primary-opacity-6 g-flex-center">
+                                    <div class="text-center">
+                                        <i class="icon-magnifier-add g-text-white g-font-size-25"></i>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-sm-10 col-md-4 g-pb-15 g-pr-md-15">
+                        <div class="gallery-item caption">
+                            <a href="assets/images/8.jpg" class="popup-img" data-toggle="lightbox" data-gallery="example-gallery">
+                                <div class="caption-default ">
+                                    <img src="assets/images/8.jpg" alt="Image Description">
+                                </div>
+                                <div class="caption-active g-bg-primary-opacity-6 g-flex-center">
+                                    <div class="text-center">
+                                        <i class="icon-magnifier-add g-text-white g-font-size-25"></i>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <p class="g-mt-30 text-center">
+                    <a href="#" class="btn g-btn-lg-lg g-btn-primary g-mb-15 g-mb-sm-0 g-mr-sm-15 g-rounded-50"><i class="icon-picture g-mr-5"></i> <span>View More</span></a>
+                </p>
+            </div>
+        </section>
+        <!-- END Gallery -->
+
+        <!-- Form -->
+        <section class="position-relative g-py-100">
+            <div class="food-img-form">
+                <img src="assets/images/10.png" alt="Image Description">
+            </div>
+            <div class="container">
+                <div class="section-title text-center g-mb-100">
+                    <h2 class="font-dancing g-font-size-sm-45 g-mb-20 g-heading-v1-center">Make a Reservation</h2>
+                    <div class="row justify-content-center">
+                        <div class="col-md-8">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse, excepturi.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row justify-content-center align-items-end g-shadow-v1 g-bg-white position-relative">
+                    <div class="col-sm-8 col-lg-5 g-mb-30 g-mb-md-0">
+                        <h1 class="font-dancing g-font-size-sm-35 g-my-50 text-center">Reservation Form</h1>
+                        <form id="contactform" class="contact-form g-pb-50 reservation-form-home-2">
+                            <div class="form-group">
+                                <div class="input-group focus-effect">
+                                    <div class="input-group-prepend g-w50 g-p-0">
+                                        <i class="icon-user g-text-gray-darken-1"></i>
+                                    </div>
+                                    <input type="text" class="form-control bg-transparent" id="input1-1" placeholder="John Doe">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-group focus-effect">
+                                    <div class="input-group-prepend g-w50 g-p-0">
+                                        <i class="icon-envelope g-text-gray-darken-1"></i>
+                                    </div>
+                                    <input type="email" class="form-control bg-transparent" id="input2-1" placeholder="John Doe">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-group focus-effect">
+                                    <div class="input-group-prepend g-w50 g-p-0">
+                                        <i class="icon-phone g-text-gray-darken-1"></i>
+                                    </div>
+                                    <input type="text" class="form-control bg-transparent" id="input3-1" placeholder="John Doe">
+                                </div>
+                            </div>
+                            <div class="form-group g-mb-20">
+                                <div class="input-group focus-effect">
+                                    <div class="input-group-prepend g-w50 g-p-0">
+                                        <i class="icon-speech g-text-gray-darken-1"></i>
+                                    </div>
+                                    <textarea class="form-control bg-transparent" rows="5" id="input4-1" placeholder="Your message goes here..."></textarea>
+                                </div>
+                            </div>
+                            <div class="form-group g-mb-0 text-center">
+                                <button type="submit" class="btn g-btn-lg-lg g-btn-primary g-mr-15 g-rounded-50"><i class="icon-pencil g-mr-10"></i>Reserve Table</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-sm-8 col-lg-5">
+                        <img class="img-fluid" src="assets/images/9.png" alt="Image Description">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- END Form -->
+
+        <!-- Events -->
+        <section class="g-py-100 g-bg-gray-lighten-4">
+            <div class="container">
+                <div class="section-title text-center g-mb-70">
+                    <h2 class="font-dancing g-font-size-sm-45 g-mb-20 g-heading-v1-center">Upcoming Events</h2>
+                    <div class="row justify-content-center">
+                        <div class="col-md-8">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse, excepturi.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row align-items-end justify-content-center">
+                    <div class="col-sm-8 col-md-6 col-lg-4">
+                        <article class="g-p-10">
+                            <div>
+                                <img class="img-fluid" src="assets/images/22.jpg" alt="Image Description">
+                            </div>
+                            <div class="g-px-15">
+                                <div class="g-m-0 g-p-20 g-bg-white g-shadow-v1 position-relative g-top-minus-50 g-index-up">
+                                    <h6 class="font-weight-bold text-uppercase g-mb-20">
+                                        <a class="g-text-bluegray-darken-1" href="#">10 ways to improve your Business</a>
+                                    </h6>
+                                    <p class="g-text-bluegray-darken-1 g-mb-10">But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born ...</p>
+                                    <p class=" g-pt-10 g-border-t g-border-gray-lighten-3">
+                                        <span class="g-text-primary g-mr-5"><i class="fa fa-user"></i></span>
+                                        <span><a class="text-muted" href="#">username </a> / <a href="#">category</a></span>
+                                    </p>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-sm-8 col-md-6 col-lg-4">
+                        <article class="g-p-10">
+                            <div>
+                                <img class="img-fluid" src="assets/images/20.jpg" alt="Image Description">
+                            </div>
+                            <div class="g-px-15">
+                                <div class="g-m-0 g-p-20 g-bg-white g-shadow-v1 position-relative g-top-minus-50 g-index-up">
+                                    <h6 class="font-weight-bold text-uppercase g-mb-20">
+                                        <a class="g-text-bluegray-darken-1" href="#">10 ways to improve your Business</a>
+                                    </h6>
+                                    <p class="g-text-bluegray-darken-1 g-mb-10">But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born ...</p>
+                                    <p class=" g-pt-10 g-border-t g-border-gray-lighten-3">
+                                        <span class="g-text-primary g-mr-5"><i class="fa fa-user"></i></span>
+                                        <span><a class="text-muted" href="#">username </a> / <a href="#">category</a></span>
+                                    </p>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-sm-8 col-md-6 col-lg-4">
+                        <article class="g-p-10">
+                            <div>
+                                <img class="img-fluid" src="assets/images/21.jpg" alt="Image Description">
+                            </div>
+                            <div class="g-px-15">
+                                <div class="g-m-0 g-p-20 g-bg-white g-shadow-v1 position-relative g-top-minus-50 g-index-up">
+                                    <h6 class="font-weight-bold text-uppercase g-mb-20">
+                                        <a class="g-text-bluegray-darken-1" href="#">10 ways to improve your Business</a>
+                                    </h6>
+                                    <p class="g-text-bluegray-darken-1 g-mb-10">But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born ...</p>
+
+                                    <p class=" g-pt-10 g-border-t g-border-gray-lighten-3">
+                                        <span class="g-text-primary g-mr-5"><i class="fa fa-user"></i></span>
+                                        <span><a class="text-muted" href="#">username </a> / <a href="#">category</a></span>
+                                    </p>
+                                </div>
+                            </div>
+
+                        </article>
+                    </div>
+                </div>
+                <p class="text-center">
+                    <a href="events.html" class="btn g-btn-lg-lg g-btn-primary g-mr-15 g-rounded-50"><i class="icon-book-open g-mr-10"></i>Read More</a>
+                </p>
+            </div>
+
+        </section>
+        <!-- END Events -->
+
+        <!-- Footer -->
+        {% include '../_partials/footer.html' %}
+        <!-- END Footer -->
+
+    </div>
+    <!-- END Main Content -->
+</div>
+<!-- END Main Wrapper -->
+{% endblock %}
+{% block additional-footer-scripts %}
+
+{% endblock %}
+
+

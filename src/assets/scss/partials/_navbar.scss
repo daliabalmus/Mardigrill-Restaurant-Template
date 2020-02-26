@@ -1,0 +1,567 @@
+
+
+//    @   7. NAVBAR
+//    @       7.1 MARDIGRILL HEADER ( NAVBAR )
+//    @       7.2 DROPDOWN ( MENU - SUBMENU )
+
+
+
+/*
+    7.1 MARDIGRILL HEADER ( NAVBAR )
+*/
+.g-header {
+    width: 100%;
+    z-index: 200;
+}
+
+.g-navbar-wrapper {
+	z-index: 200;
+    transition: background-color 0.2s ease-in-out;
+    -webkit-backface-visibility: hidden;
+    background-color: transparent;
+	.navbar {
+		font-family: $navbar-font-family;
+        background-color: transparent;
+		> .container,
+		> .container-fluid {
+			display: flex;
+			flex-wrap: wrap;
+			align-items: center;
+			justify-content: start;
+		}
+		.navbar-toggler {
+			margin-left:auto;
+			outline:0;
+			border: 0;
+			cursor:pointer;
+			margin-right:10px;
+			.navbar-toggler-icon {
+				height:auto;
+			}
+		}
+		.logo-wrapper {
+			img {
+				transition: all 0.2s ease-in-out;
+			}
+		}
+		.navbar-nav {
+			.nav-link {
+				padding:$navbar-link-padding-y $navbar-link-padding-x;
+				font-size: $navbar-link-font-size;
+				text-transform: $navbar-link-text-transform;
+				font-weight: $navbar-link-font-weight;
+				i {
+					vertical-align: middle;
+				}
+			}
+			.dropdown-toggle {
+				&:after {
+					display: none;
+				}
+			}
+		}
+	}
+    &.g-navbar-logo-centered {
+        @include media-breakpoint-up(lg) {
+            .logo-wrapper {
+                display: none;
+            }
+        }
+        @include media-breakpoint-down(md) {
+            .logo-item {
+                display: none;
+            }
+        }
+        
+    }
+    &.g-navbar-left-aligned {
+        .navbar-nav {
+            margin-left:30px !important;
+            margin-right:auto;
+        }
+    }
+    &.g-navbar-fullwidth {
+        .navbar {
+            > .container {
+                min-width:100% !important;
+                padding-left:1rem;
+                padding-right:1rem;
+            }
+            .navbar-nav {
+                li:nth-last-child(-n+2) {
+                    .dropdown-menu {
+                        right:0;
+                        left:auto;
+                    }
+                }
+            }
+            
+        }
+    }
+    &.sticky-navbar {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: auto;
+        animation: showStickyNav 0.5s ease-in-out;
+        @include media-breakpoint-down(lg) {
+            .navbar-collapse.collapse.show {
+                max-height: 350px;
+                overflow-y: auto;
+            }
+        }
+    }
+    &.sticky-navbar-v2 {
+        position: fixed !important;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom:auto;
+        @include media-breakpoint-down(lg) {
+            .navbar-collapse.collapse.show {
+                max-height: 350px;
+                overflow-y: auto;
+            }
+        }
+    }
+
+
+    // Navbar White Color ( Links )
+
+    &.g-navbar-white-color {
+        .navbar-brand {
+            color: $navbar-white-active-color;
+            @include hover-focus {
+                color: $navbar-white-active-color;
+            }
+        }
+        .navbar-nav {
+            .nav-link {
+                color: $navbar-white-color;
+                @include hover-focus {
+                    color: $navbar-white-hover-color;
+                }
+                &.disabled {
+                    color: $navbar-white-disabled-color;
+                }
+            }
+            .show > .nav-link,
+            .active > .nav-link,
+            .nav-link.show,
+            .nav-link.active {
+                color: $navbar-white-active-color;
+            }
+            li {
+                &:first-of-type {
+                    .nav-link {
+                        &.active {
+                            background-color: transparent;
+                            color: $navbar-white-color;
+                            &:hover {
+                                color: $navbar-white-hover-color;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .navbar-toggler {
+            color: $navbar-white-color;
+            border-color: $navbar-white-toggler-border-color;
+        }
+        .navbar-text {
+            color: $navbar-white-color;
+            a {
+                color: $navbar-white-active-color;
+
+                @include hover-focus {
+                    color: $navbar-white-active-color;
+                }
+            }
+        }
+    }
+    &.g-navbar-white-color-h {
+        .navbar-brand {
+            @include hover-focus {
+                color: #ffffff;
+            }
+        }
+        .navbar-nav {
+            .nav-link {
+                @include hover-focus {
+                    color: #ffffff !important;
+                }
+            }
+            .show > .nav-link,
+            .active > .nav-link,
+            .nav-link.show,
+            .nav-link.active {
+                color: #ffffff !important;
+            }
+            li {
+                &:first-of-type {
+                    .nav-link {
+                        &.active {
+                            &:hover {
+                                color: #ffffff !important;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .navbar-text {
+            a {
+                @include hover-focus {
+                    color: #ffffff !important;
+                }
+            }
+        }
+    }
+
+    // Light Links Color ( Links )
+
+
+    &.g-navbar-light-color {
+        .navbar-brand {
+            color: $navbar-light-active-color;
+            @include hover-focus {
+                color: $navbar-light-active-color;
+            }
+        }
+        .navbar-nav {
+            .nav-link {
+                color: $navbar-light-color;
+                @include hover-focus {
+                    color: $navbar-light-hover-color;
+                }
+                &.disabled {
+                    color: $navbar-light-disabled-color;
+                }
+            }
+            .show > .nav-link,
+            .active > .nav-link,
+            .nav-link.show,
+            .nav-link.active {
+                color: $navbar-light-active-color;
+            }
+            li {
+                &:first-of-type {
+                    .nav-link {
+                        &.active {
+                            background-color: transparent;
+                            color: $navbar-light-color;
+                            &:hover {
+                                color: $navbar-light-hover-color;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .navbar-toggler {
+            color: $navbar-light-color;
+            border-color: $navbar-light-toggler-border-color;
+        }
+        .navbar-text {
+            color: $navbar-light-color;
+            a {
+                color: $navbar-light-active-color;
+
+                @include hover-focus {
+                    color: $navbar-light-active-color;
+                }
+            }
+        }
+    }
+    &.g-navbar-light-color-h {
+        .navbar-brand {
+            @include hover-focus {
+                color: $navbar-light-color;
+            }
+        }
+        .navbar-nav {
+            .nav-link {
+                @include hover-focus {
+                    color: $navbar-light-color !important;
+                }
+            }
+            .show > .nav-link,
+            .active > .nav-link,
+            .nav-link.show,
+            .nav-link.active {
+                color: $navbar-light-color !important;
+            }
+            li {
+                &:first-of-type {
+                    .nav-link {
+                        &.active {
+                            &:hover {
+                                color: $navbar-light-color !important;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .navbar-text {
+            a {
+                @include hover-focus {
+                    color: $navbar-light-color !important;
+                }
+            }
+        }
+    }
+
+    // Dark Links Color ( Links )
+
+    &.g-navbar-dark-color {
+        .navbar {
+            .navbar-brand {
+                color: $navbar-dark-active-color;
+                @include hover-focus {
+                    color: $navbar-dark-active-color;
+                }
+            }
+            .navbar-nav {
+                .nav-link {
+                    color: $navbar-dark-color;
+                    @include hover-focus {
+                        color: $navbar-dark-hover-color;
+                    }
+                    &.disabled {
+                        color: $navbar-dark-disabled-color;
+                    }
+                }
+                .show > .nav-link,
+                .active > .nav-link,
+                .nav-link.show,
+                .nav-link.active {
+                    color: $navbar-dark-active-color;
+                }
+                li {
+                    &:first-of-type {
+                        .nav-link {
+                            &.active {
+                                background-color: transparent;
+                                color: $navbar-dark-color;
+                                &:hover {
+                                    color: $navbar-dark-hover-color;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .navbar-toggler {
+                color: $navbar-dark-color;
+                border-color: $navbar-dark-toggler-border-color;
+            }
+            .navbar-text {
+                color: $navbar-dark-color;
+                a {
+                    color: $navbar-dark-active-color;
+
+                    @include hover-focus {
+                        color: $navbar-dark-active-color;
+                    }
+                }
+            }
+        }
+    }
+    &.g-navbar-dark-color-h {
+        .navbar-brand {
+            @include hover-focus {
+                color: $dark;
+            }
+        }
+        .navbar-nav {
+            .nav-link {
+                @include hover-focus {
+                    color: $dark !important;
+                }
+            }
+            .show > .nav-link,
+            .active > .nav-link,
+            .nav-link.show,
+            .nav-link.active {
+                color: $dark !important;
+            }
+            li {
+                &:first-of-type {
+                    .nav-link {
+                        &.active {
+                            &:hover {
+                                color: $dark !important;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .navbar-text {
+            a {
+                @include hover-focus {
+                    color: $dark !important;
+                }
+            }
+        }
+    }
+
+
+
+    //	White Sticky Navbar
+
+    &.sticky-light {
+        &.sticky-navbar,
+        &.sticky-navbar-v2 {
+            background-color: #ffffff !important;
+            border-bottom: 1px solid #eeeeee !important;
+            .navbar {
+                .nav-link {
+                    color: $navbar-dark-color;
+                    &:hover {
+                        color: $navbar-dark-hover-color !important;
+                    }
+                    &.active {
+                        color: $navbar-dark-active-color !important;
+                    }
+                }
+                .show > .nav-link,
+                .active > .nav-link,
+                .nav-link.show,
+                .nav-link.active {
+                    color: $navbar-dark-hover-color !important;
+                }
+                .navbar-toggler {
+                    .navbar-toggler-icon {
+                        color: $navbar-dark-color;
+                    }
+                }
+                li {
+                    &:first-of-type {
+                        .nav-link {
+                            &.active {
+                                color: $navbar-dark-active-color;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    //	Dark Sticky Navbar
+
+    &.sticky-dark {
+        &.sticky-navbar,
+        &.sticky-navbar-v2 {
+            background-color: $dark !important;
+            border-bottom: 1px solid $dark !important;
+            .navbar {
+                .nav-link {
+                    color: $navbar-light-color;
+                    &:hover {
+                        color: $navbar-light-hover-color !important;
+                    }
+                    &.active {
+                        color: $navbar-light-active-color !important;
+                    }
+                }
+                .show > .nav-link,
+                .active > .nav-link,
+                .nav-link.show,
+                .nav-link.active {
+                    color: $navbar-light-hover-color !important;
+                }
+                .navbar-toggler {
+                    .navbar-toggler-icon {
+                        color: $navbar-light-color;
+                    }
+                }
+                li {
+                    &:first-of-type {
+                        .nav-link {
+                            &.active {
+                                color: $navbar-light-active-color;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+//  Generate series of `.navbar-expand-*` responsive classes for configuring
+//  where your navbar collapses.
+
+
+.navbar-expand {
+	@each $breakpoint in map-keys($grid-breakpoints) {
+		$next: breakpoint-next($breakpoint, $grid-breakpoints);
+		$infix: breakpoint-infix($next, $grid-breakpoints);
+
+		&#{$infix} {
+			@include media-breakpoint-down($breakpoint) {
+				> .container,
+				> .container-fluid {
+					padding-right: 0px !important;
+					padding-left: 0px !important;
+					min-width:100%;
+				}
+				.logo-wrapper {
+					padding: 0rem 1rem;
+				}
+				.navbar-collapse {
+					background-color: $bluegray-900 !important;
+					border-bottom:2px solid theme-color("primary");
+					text-align: center;
+					.navbar-nav {
+						.nav-link {
+							padding: 0.7rem 1rem;
+							color: #d0dce4 !important;
+							&:hover {
+								color: theme-color("primary") !important;
+							}
+						}
+						.dropdown-menu {
+							.dropdown-item {
+								text-align: center;
+								justify-content: center;
+								i {
+									transform: rotate(90deg);
+								}
+							}
+						}
+					}
+				}
+			}
+			@include media-breakpoint-up($next) {
+				.dropdown-item {
+					display: flex;
+					align-items: center;
+					justify-content: space-between;
+				}
+			}
+		}
+	}
+}
+
+@keyframes showStickyNav {
+    0% {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.no-caret {
+    &.dropdown-toggle::after {
+        display:none
+    }
+}

@@ -1,0 +1,48 @@
+
+
+// Scrollbar
+//  ---------------------------------------------------------------------------------------------
+
+.perfect-scrollbar {
+    position: relative;
+    overflow: hidden;
+}
+
+.ps__rail-y {
+    display: none;
+    opacity: 0;
+    transition: background-color .2s linear, opacity .2s linear;
+    -webkit-transition: background-color .2s linear, opacity .2s linear;
+    width: 4px;
+    right: 1px;
+    position: absolute;
+    z-index: 2000;
+
+}
+.ps__thumb-y {
+    background-color: #cdd5e1;
+    border-radius: 6px;
+    transition: background-color .2s linear, width .2s ease-in-out;
+    -webkit-transition: background-color .2s linear, width .2s ease-in-out;
+    width: 4px;
+    /* there must be 'right' for ps__thumb-y */
+    right: 0px;
+    /* please don't change 'position' */
+    position: absolute;
+
+}
+.ps__rail-y:hover > .ps__thumb-y,
+.ps__rail-y:focus > .ps__thumb-y,
+.ps__rail-y.ps--clicking .ps__thumb-y {
+    background-color: #c3cbd7 !important;
+    width: 4px;
+    right:0px;
+    cursor: pointer !important;
+}
+.ps__rail-y:hover,
+.ps__rail-y:focus,
+.ps__rail-y.ps--clicking {
+    width: 4px;
+    background-color: #eeeeee !important;
+
+}

@@ -1,0 +1,41 @@
+/*
+    @
+    @   25. BREADCRUMB
+    @
+*/
+
+.breadcrumb {
+    background-color: $breadcrumb-bg;
+    padding-left:0;
+    .breadcrumb-item {
+        a {
+            color: #333333;
+        }
+    }
+    &.breadcrumb-light {
+        .breadcrumb-item {
+            a {
+                color: #d1d5dc !important;
+            }
+        }
+    }
+    .breadcrumb-item {
+        // The separator between breadcrumbs (by default, a forward-slash: "/")
+        + .breadcrumb-item {
+            padding-left: $breadcrumb-item-padding;
+        
+            //&::before {
+            //    display: inline-block; // Suppress underlining of the separator in modern browsers
+            //    vertical-align:middle;
+            //    padding-right: 0;
+            //    margin-right:0.5rem;
+            //    color: $breadcrumb-divider-color;
+            //    content: $breadcrumb-divider;
+            //    background-color: #bebebe !important;
+            //    border-radius:50%;
+            //    width: 6px;
+            //    height: 6px;
+            //}
+        }
+    }
+}

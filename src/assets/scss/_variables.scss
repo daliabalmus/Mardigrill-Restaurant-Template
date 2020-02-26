@@ -1,0 +1,763 @@
+
+//  @
+//  @   VARIABLES
+//  @
+
+
+// Grays
+
+$white:         #ffffff;
+$gray-100:   #f9f9f9;
+$gray-200:   #f2f3f4;
+$gray-300:   #e9eaeb;  //#dfe0e1;
+$gray-400:   #dadbdc;
+$gray-500:   #afafaf;
+$gray-600:   #9b9b9b;
+$gray-700:   #828282;
+$gray-800:   #696969;
+$gray-900:   #505050;
+$black:          #000000;
+
+$bluegray-100: #cdd5e7;
+$bluegray-200: #bdc5d7;
+$bluegray-300: #a5acbe;
+$bluegray-400: #8c93a5;
+$bluegray-500: #747b8c;
+$bluegray-600: #5e6373;
+$bluegray-700: #464b5a;
+$bluegray-800: #2e3341;
+$bluegray-900: #252a37;
+
+$custom-grays: ();
+$custom-grays: map-merge((
+    "gray-lighten-4": $gray-100,
+    "gray-lighten-3": $gray-200,
+    "gray-lighten-2": $gray-300,
+    "gray-lighten-1": $gray-400,
+    "gray": $gray-500,
+    "gray-darken-1": $gray-600,
+    "gray-darken-2": $gray-700,
+    "gray-darken-3": $gray-800,
+    "gray-darken-4": $gray-900
+), $custom-grays);
+
+$custom-bluegrays: ();
+$custom-bluegrays: map-merge((
+    "bluegray-lighten-4": $bluegray-100,
+    "bluegray-lighten-3": $bluegray-200,
+    "bluegray-lighten-2": $bluegray-300,
+    "bluegray-lighten-1": $bluegray-400,
+    "bluegray": $bluegray-500,
+    "bluegray-darken-1": $bluegray-600,
+    "bluegray-darken-2": $bluegray-700,
+    "bluegray-darken-3": $bluegray-800,
+    "bluegray-darken-4": $bluegray-900
+), $custom-bluegrays);
+
+$mg-grays: map_merge($custom-grays, $custom-bluegrays);
+
+// MardiGrill Colors
+
+$blue:              #1F94F3;
+$indigo:            #3F51B5;
+$purple:            #7a66b7;
+$pink:               #eb408d;
+$red:                 #A52A2A;   //#d62a3d;
+$amber:             #FFCA28;
+$orange:            #eb6a33;
+$brown:            #9b6730;
+$yellow:            #ffdf40;
+$green:             #10c76e; //#28d798; // 28D094 25d257 28D094
+$teal:                #2dc89d;
+$cyan:              #4ac1d0; //#4ac1d0 #78c7d8;
+$cyan2:             #38a5b1;
+$bluegray:        #597684;
+
+$primary:         $red; // #2dc89d  #2dbe93 #10c76e
+$secondary:     #757c88;
+$success:         $green;
+$info:               $cyan;
+$warning:        $yellow;
+$danger:          $red;
+$light:              $gray-100;
+$dark:              $bluegray-900;
+
+$mg-colors: ();
+$mg-colors: map-merge((
+    "blue":                 $blue,
+    "purple":              $purple,
+    "red":                  $red,
+    "amber":            $amber,
+    "orange":           $orange,
+    "brown":             $brown,
+    "yellow":             $yellow,
+    "green":              $green,
+    "teal":                  $teal,
+    "cyan":                $cyan,
+    "cyan2":               $cyan2,
+), $mg-colors);
+
+// Theme Colors
+
+$theme-colors: ();
+$theme-colors: map-merge((
+    "primary":      $primary,
+    "secondary":  $secondary,
+    "success":      $success,
+    "info":            $info,
+    "warning":     $warning,
+    "danger":       $danger,
+    "light":           $light,
+    "dark":           $dark
+), $theme-colors);
+
+$theme-colors-set2: ();
+$theme-colors-set2: map-merge((
+    "primary":    $primary,
+    "success":    $success,
+    "info":           $info,
+    "warning":    $warning,
+    "danger":     $danger,
+), $theme-colors-set2);
+
+// The yiq lightness value that determines when the lightness of color changes from "dark" to "light". Acceptable values are between 0 and 255.
+$yiq-contrasted-threshold:  200;
+
+
+// Preloader
+
+$preloader-ring-color: $primary;
+
+// Set a specific jump point for requesting color jumps
+$theme-color-interval: 8%;
+
+
+// Spacing
+
+$spacer: 1rem;
+$spacers: (
+    0: 0,
+    1: ($spacer * .25),
+    2: ($spacer * .5),
+    3: $spacer,
+    4: ($spacer * 1.5),
+    5: ($spacer * 3),
+);
+
+// This variable affects the `.h-*` and `.w-*` classes.
+$sizes: (
+    20: 20%,
+    25: 25%,
+    40: 40%,
+    50: 50%,
+    60: 60%,
+    75: 75%,
+    100: 100%
+);
+
+// Grid breakpoints
+//
+// Define the minimum dimensions at which your layout will change,
+// adapting to different screen sizes, for use in media queries.
+
+$grid-breakpoints: (
+    xs: 0,
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px
+);
+
+@include _assert-ascending($grid-breakpoints, "$grid-breakpoints");
+@include _assert-starts-at-zero($grid-breakpoints);
+
+// Grid containers
+//
+// Define the maximum width of `.container` for different screen sizes.
+
+$container-max-widths: (
+    //md: 720px,
+    lg: 960px,
+    xl: 1140px
+);
+
+@include _assert-ascending($container-max-widths, "$container-max-widths");
+
+// Body
+// Settings for the `<body>` element.
+
+$body-bg:                    #ffffff;
+$body-color:                $bluegray-700;
+
+
+// Customize the light and dark text colors for use in our YIQ color contrast function.
+$yiq-text-dark:            $body-color;
+$yiq-text-light:            $white;
+
+// Links
+// Style anchor elements.
+
+$link-color:                         theme-color("primary");
+$link-decoration:                none;
+$link-hover-color:               darken($link-color, 2%);
+$link-hover-decoration:      none;
+
+// Paragraphs
+// Style p element.
+
+$paragraph-margin-bottom:   0;
+
+// Grid Gutter
+
+$grid-gutter-width:             20px;
+
+// Components
+// Define common padding and border radius sizes and more.
+
+$component-active-color:     $white;
+$component-active-bg:        theme-color("primary");
+
+$line-height-base:                1.5;
+$line-height-sm:                   1.5;
+$line-height-lg:                    1.5;
+
+$border-width:                    1px;
+$border-color:                     $light;
+$border-radius:                   .15rem;
+$border-radius-xl:               .25rem;
+$border-radius-lg:               .2rem;
+$border-radius-sm:             .1rem;
+
+$transition-base:                 all .2s ease-in-out;
+$transition-fade:                 opacity .15s linear;
+$transition-collapse:            height .35s ease;
+
+// Options
+// Quickly modify global styling by enabling or disabling optional features.
+
+$enable-caret:                             true;
+$enable-rounded:                        true;
+$enable-shadows:                        false;
+$enable-gradients:                       false;
+$enable-transitions:                     true;
+$enable-hover-media-query:       false;
+$enable-grid-classes:                   true;
+$enable-print-styles:                    true;
+$enable-btn-shadows:                 false;
+
+// Fonts
+
+$font-family-base:             'Nunito',sans-serif;
+$font-size-base:                 0.935rem;
+
+$font-size-xlg:                   1.3rem;
+$font-size-lg:                     1.125rem;
+$font-size-sm:                   0.875rem;
+$font-size-xs:                    0.75rem;
+
+$font-weight-light:            300;
+$font-weight-normal:        400;
+$font-weight-medium:       500;
+$font-weight-semibold:     600;
+$font-weight-bold:            700;
+$font-weight-base:            $font-weight-normal;
+
+$h1-font-size:                   $font-size-base * 2.2;
+$h2-font-size:                   $font-size-base * 2;
+$h3-font-size:                   $font-size-base * 1.75;
+$h4-font-size:                   $font-size-base * 1.5;
+$h5-font-size:                   $font-size-base * 1.25;
+$h6-font-size:                   $font-size-base;
+
+$lead-font-size:              ($font-size-base * 1.25);
+$lead-font-weight:            300;
+
+$small-font-size:             80%;
+$text-muted:                  $bluegray-500;
+
+$blockquote-small-color:      $gray-600;
+$blockquote-font-size:        ($font-size-base * 1.25);
+
+$hr-border-color:             rgba($black, .1);
+$hr-border-width:             $border-width;
+
+// Tables
+
+$table-cell-padding:             .75rem;
+$table-cell-padding-sm:       .3rem;
+
+$table-bg:                            #ffffff;
+$table-accent-bg:                 $gray-200;
+$table-hover-bg:                  rgba($black,.075);
+$table-active-bg:                  $table-hover-bg;
+
+$table-border-width:           $border-width;
+$table-border-color:            $gray-300;
+
+$table-head-bg:                   $gray-200;
+$table-head-color:               $gray-700;
+
+
+$table-dark-bg:                    $bluegray-800;
+$table-dark-accent-bg:         $bluegray-700;
+$table-dark-hover-bg:          rgba($white, .075);
+$table-dark-border-color:     lighten($bluegray-800, 5%);
+
+$table-hover-bg:                  $gray-100;
+
+// Icons
+// Custom Icon Size
+
+$icon-background:      theme-color("dark");
+
+$icon-font-size-1:           0.75rem;
+$icon-font-size-2:           0.8rem;
+$icon-font-size-3:           1rem;
+$icon-font-size-4:           1.2rem;
+$icon-font-size-5:           1.4rem;
+$icon-font-size-6:           1.8rem;
+
+$icon-size-1:                26px;
+$icon-size-2:                30px;
+$icon-size-3:                40px;
+$icon-size-4:                50px;
+$icon-size-5:                60px;
+$icon-size-6:                70px;
+
+$icon-transition:          background-color .10s ease-in-out, color .10s ease-in-out, border-color .10s ease-in-out;
+
+// Buttons + Forms
+// Shared variables that are reassigned to `$input-` and `$btn-` specific variables.
+
+$input-btn-focus-width:              .2rem;
+$input-btn-focus-color:               rgba($component-active-bg, .25);
+$input-btn-focus-box-shadow:    0; //0 0 0 $input-btn-focus-width $input-btn-focus-color;
+$input-btn-border-width:            $border-width;
+
+//  Default
+$input-btn-padding-y:          0.5rem;
+$input-btn-padding-x:          1.6rem;
+$input-btn-line-height:         $line-height-base;
+
+//  Extra Small
+$input-btn-padding-y-xs:     0.2rem;
+$input-btn-padding-x-xs:     1rem;
+$input-btn-line-height-xs:    $line-height-sm;
+
+//  Small
+$input-btn-padding-y-sm:     0.4rem;
+$input-btn-padding-x-sm:     1.3rem;
+$input-btn-line-height-sm:    $line-height-sm;
+
+//  Large
+$input-btn-padding-y-lg:      0.8rem;
+$input-btn-padding-x-lg:      1.9rem;
+$input-btn-line-height-lg:      $line-height-lg;
+
+//  Extra Large
+$input-btn-padding-y-xl:      1rem;
+$input-btn-padding-x-xl:      2.4rem;
+$input-btn-line-height-xl:     $line-height-lg;
+
+
+// Buttons
+// For each of Bootstrap's buttons, define text, background, and border color.
+
+$btn-padding-y:              $input-btn-padding-y;
+$btn-padding-x:              $input-btn-padding-x;
+$btn-line-height:             $input-btn-line-height;
+
+$btn-padding-y-xs:         $input-btn-padding-y-xs;
+$btn-padding-x-xs:         $input-btn-padding-x-xs;
+$btn-line-height-xs:        $line-height-sm;
+
+$btn-padding-y-sm:        $input-btn-padding-y-sm;
+$btn-padding-x-sm:        $input-btn-padding-x-sm;
+$btn-line-height-sm:       $line-height-sm;
+
+$btn-padding-y-lg:          $input-btn-padding-y-lg;
+$btn-padding-x-lg:          $input-btn-padding-x-lg;
+$btn-line-height-lg:         $line-height-lg;
+
+$btn-padding-y-xl:          $input-btn-padding-y-xl;
+$btn-padding-x-xl:          $input-btn-padding-x-xl;
+$btn-line-height-xl:         $line-height-lg;
+
+$btn-border-width:               $input-btn-border-width;
+
+$btn-font-weight:                  $font-weight-normal;
+$btn-box-shadow:                 inset 0 1px 0 rgba($white, .15), 0 1px 1px rgba($black, .075);
+$btn-focus-width:                  $input-btn-focus-width;
+$btn-focus-box-shadow:       $input-btn-focus-box-shadow;
+$btn-disabled-opacity:           .65;
+$btn-active-box-shadow:       inset 0 3px 5px rgba($black, .125);
+$btn-link-disabled-color:       $gray-600;
+$btn-block-spacing-y:           .5rem;
+
+// Allows for customizing button radius independently from global border radius
+$btn-border-radius:              $border-radius;
+$btn-border-radius-xl:          $border-radius-xl;
+$btn-border-radius-lg:          $border-radius-lg;
+$btn-border-radius-sm:        $border-radius-sm;
+$btn-transition:                     color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+
+// Forms / Inputs
+
+$input-padding-y:                          $input-btn-padding-y;
+$input-padding-x:                          $input-btn-padding-x / 2;
+$input-line-height:                         $input-btn-line-height;
+
+$input-padding-y-sm:                    $input-btn-padding-y-sm;
+$input-padding-x-sm:                    $input-btn-padding-x-sm / 2;
+$input-line-height-sm:                   $input-btn-line-height-sm;
+
+$input-padding-y-lg:                      $input-btn-padding-y-lg;
+$input-padding-x-lg:                      $input-btn-padding-x-lg / 2;
+$input-line-height-lg:                     $input-btn-line-height-lg;
+
+
+$input-bg:                                           white;
+$input-disabled-bg:                             $gray-300;
+
+$input-color:                                       $gray-800;
+$input-border-color:                           #e8e8e8;
+$input-btn-border-width:                   $border-width;
+$input-height-border:                         $input-btn-border-width * 2;
+$input-height-inner:                           ($font-size-base * $input-btn-line-height) + ($input-btn-padding-y * 2);
+$input-height:                                     calc(#{$input-height-inner} + #{$input-height-border});
+$input-height:                                     calc(#{$input-height-inner} + #{$input-height-border});
+$input-focus-border-color:                 theme-color("primary");
+$input-focus-bg-color:                        $white;
+$input-border-radius:                         $border-radius;
+
+$input-group-addon-bg:                     white;
+$input-group-addon-border-color:     $input-border-color;
+
+$input-group-append-prepend-bg:		white;
+
+$custom-select-focus-border-color:    $input-focus-border-color;
+$custom-select-focus-box-shadow:     0;
+
+// Navs
+
+$nav-link-padding-y:                  .5rem;
+$nav-link-padding-x:                  1rem;
+$nav-link-disabled-color:            $gray-600;
+
+$nav-tabs-link-padding-y:           .8rem;
+$nav-tabs-link-padding-x:           2rem;
+$nav-tabs-border-color:              $gray-300;
+$nav-tabs-border-width:             $border-width;
+$nav-tabs-border-radius:            $border-radius;
+
+$nav-tabs-link-color:                           $bluegray-600;
+$nav-tabs-link-hover-border-color:    $gray-300;
+$nav-tabs-link-active-color:                theme-color("primary");
+$nav-tabs-link-active-bg:                    #fff;
+$nav-tabs-link-active-border-color:    $gray-300;
+$nav-tab-content-border-color:          $nav-tabs-border-color;
+
+// Primary Tabs
+$nav-tabs-primary-border-color: theme-color("primary");
+
+// Header container
+
+$header-bg: #ffffff;
+$header-border-bottom: #ebebeb;
+
+// Navbar
+$navbar-padding-y:                        0; //($spacer / 2);
+$navbar-padding-x:                        0; // $spacer;
+$navbar-border-bottom:                 1px solid #eeeeee;
+$nav-link-height:                            ($font-size-base * $line-height-base + $nav-link-padding-y * 2);
+
+$navbar-brand-font-size:                $font-size-lg;
+$navbar-brand-height:                   $navbar-brand-font-size * $line-height-base;
+$navbar-brand-padding-y:             ($nav-link-height - $navbar-brand-height) / 2;
+$navbar-logo-size:                          auto;
+
+$navbar-link-padding-y:                  1.7rem;
+$navbar-link-padding-x:                 .8rem;
+$navbar-link-font-size:                   .85rem;
+$navbar-link-font-weight:               $font-weight-bold;
+$navbar-link-text-transform:           uppercase;
+$navbar-font-family:                       'Quicksand', sans-serif;
+
+$navbar-toggler-padding-y:              .25rem;
+$navbar-toggler-padding-x:              .75rem;
+$navbar-toggler-font-size:                $font-size-lg;
+$navbar-toggler-border-radius:        $btn-border-radius;
+
+$navbar-light-color:                            #d0dce4;
+$navbar-light-hover-color:                  $primary;
+$navbar-light-active-color:                  $navbar-light-hover-color;
+$navbar-light-disabled-color:               rgba($white,.25);
+$navbar-light-toggler-border-color:      rgba($white,.1);
+$navbar-light-toggler-icon-bg:	  		  none;
+
+$navbar-white-color:                            $white;
+$navbar-white-hover-color:                  $primary;
+$navbar-white-active-color:                  $navbar-white-hover-color;
+$navbar-white-disabled-color:              rgba($white, .3);
+$navbar-white-toggler-border-color:    rgba($white, .1);
+$navbar-white-toggler-icon-bg:	  		  none;
+
+$navbar-dark-color:                            $bluegray-900;
+$navbar-dark-hover-color:                  $primary;
+$navbar-dark-active-color:                  $navbar-dark-hover-color;
+$navbar-dark-disabled-color:              rgba($black, .3);
+$navbar-dark-toggler-border-color:      rgba($black, .1);
+$navbar-dark-toggler-icon-bg:	  		  none;
+
+
+// Dropdowns
+// Dropdown menu container and contents.
+
+$dropdown-min-width:                 15rem;
+$dropdown-padding-y:                 15px;
+$dropdown-padding-x:                  25px;
+$dropdown-spacer:                       .125rem;
+
+$dropdown-menu-bg:                             $gray-100;
+$dropdown-menu-border-color:             darken($dropdown-menu-bg, 2%);
+$dropdown-menu-border-b-color:          theme-color("primary");
+
+$dropdown-border-width:            $border-width;
+$dropdown-divider-bg:                 $gray-200;
+$dropdown-box-shadow:              none;
+$dropdown-item-padding-y:         .5rem;
+$dropdown-item-padding-x:         0rem;
+
+$dropdown-link-font-size:             .8rem;
+$dropdown-link-text-transform:    normal;
+$dropdown-link-color:                   $bluegray-800;      //#c0ccd4
+$dropdown-link-font-weight:         $font-weight-normal;
+$dropdown-link-hover-color:        lighten($primary, 5%);
+$dropdown-link-hover-bg:            none;
+$dropdown-link-active-color:        $dropdown-link-hover-bg;
+$dropdown-link-active-bg:            $dropdown-link-hover-bg;
+$dropdown-link-disabled-color:    $gray-600;
+$dropdown-link-border-b-color:   $bluegray-800;
+
+$dropdown-header-color:             $gray-600;
+
+
+//  Paginatio
+
+$pagination-padding-y-sm:                 .3rem;
+$pagination-padding-x-sm:                 .7rem;
+
+$pagination-padding-y:                       .4rem;
+$pagination-padding-x:                       .8rem;
+
+$pagination-padding-y-lg:                   .5rem;
+$pagination-padding-x-lg:                   .9rem;
+
+$pagination-line-height:                       1.5;
+$pagination-space-between:                1px;
+$pagination-color:                                $bluegray-500;
+$pagination-bg:                                    $white;
+$pagination-border-width:                   $border-width;
+$pagination-border-color:                    $gray-400;
+
+$pagination-hover-bg:                         theme-color("primary");
+$pagination-hover-color:                      $white;
+$pagination-hover-border-color:          theme-color("primary");
+
+$pagination-active-color:                      $white;
+$pagination-active-bg:                          theme-color("primary");
+$pagination-active-border-color:          theme-color("primary");
+
+$pagination-disabled-color:                  $gray-500;
+$pagination-disabled-bg:                      $white;
+$pagination-disabled-border-color:      $gray-300;
+
+
+// Custom control indicator ( checkbox / radio )
+
+$custom-control-indicator-size:                               1.2rem;
+$custom-control-indicator-bg:                                 $gray-200;
+$custom-control-indicator-bg-size:                          70% 70%;
+$custom-control-indicator-box-shadow:                  inset 0 .25rem .25rem rgba($black, .1);
+$custom-control-indicator-disabled-bg:                   $gray-200;
+$custom-control-label-disabled-color:                     $gray-500;
+
+$custom-control-indicator-checked-color:               $white;
+$custom-control-indicator-checked-color-v2:          theme-color("primary");
+$custom-control-indicator-checked-bg:                   theme-color("primary");
+$custom-control-indicator-checked-box-shadow:    none;
+$custom-control-indicator-focus-box-shadow:        0 0 0 1px $body-bg, $input-btn-focus-box-shadow;
+
+$custom-control-indicator-active-color:                   $white;
+$custom-control-indicator-active-bg:                       lighten(theme-color("primary"), 35%);
+$custom-control-indicator-active-box-shadow:        none;
+
+$custom-checkbox-indicator-icon-checked-v2:        str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Cpath fill='#{$custom-control-indicator-checked-color-v2}' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3E%3C/svg%3E"), "#", "%23");
+
+$custom-radio-indicator-border-radius:                  50%;
+$custom-radio-indicator-checked-color-primary:     theme-color("primary");
+$custom-radio-indicator-icon-checked-v2:               str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3E%3Ccircle r='3' fill='#{$custom-radio-indicator-checked-color-primary}'/%3E%3C/svg%3E"), "#", "%23");
+
+// Custom File
+
+$custom-file-width:                         15rem;
+$custom-file-height:                        45px;
+$custom-file-padding-y:                  0rem;
+$custom-file-padding-x:                  1rem;
+$custom-file-line-height:                 $custom-file-height;
+
+$custom-file-border-width:             $input-btn-border-width;
+$custom-file-border-color:              $input-border-color;
+$custom-file-border-radius:            $input-border-radius;
+
+$custom-file-color:                           $input-color;
+$custom-file-button-color:               $custom-file-color;
+$custom-file-button-bg:                   $input-group-addon-bg;
+$custom-file-focus-box-shadow:      none;
+
+
+// Alerts
+// Define alert colors, border radius, and padding.
+
+$alert-padding-y:                   .75rem;
+$alert-padding-x:                   1.25rem;
+$alert-margin-bottom:               1rem;
+$alert-border-radius:               $border-radius;
+$alert-link-font-weight:            $font-weight-bold;
+$alert-border-width:                $border-width;
+
+$alert-bg-level:                    -5;
+$alert-border-level:              -1;
+$alert-color-level:                 7;
+
+// Progress bars
+
+$progressbar-size-1:      3px;
+$progressbar-size-2:      6px;
+$progressbar-size-3:      9px;
+$progressbar-size-4:      12px;
+$progressbar-size-5:      15px;
+
+$progress-height:                           1rem;
+$progress-font-size:                       ($font-size-base * .75);
+$progress-bg:                                 $gray-200;
+$progress-border-radius:                $border-radius;
+$progress-box-shadow:                  inset 0 .1rem .1rem rgba($black, .1);
+$progress-bar-color:                       $white;
+$progress-bar-bg:                           theme-color("primary");
+$progress-bar-animation-timing:    1s linear infinite;
+$progress-bar-transition:                none;
+
+// Progress steps
+
+$progress-step-bg:                #eaeaea;
+$progress-step-bg-v2:           $white;
+$progress-step-bg-v3:           $white;
+$progress-step-line-color:      $progress-step-bg;
+$progress-step-icon-color:    #b7b7b7;
+$progress-step-active-color:  theme-color('primary');
+
+
+// List Group
+
+$list-group-bg:                               $white;
+$list-group-border-color:               $gray-200;
+$list-group-border-width:              $border-width;
+$list-group-border-radius:             $border-radius;
+
+$list-group-item-padding-y:            .75rem;
+$list-group-item-padding-x:            1.25rem;
+
+$list-group-hover-bg:                     $gray-100;
+$list-group-active-color:                 $white;
+$list-group-active-bg:                     theme-color("primary");
+$list-group-active-border-color:     $list-group-active-bg;
+
+$list-group-disabled-color:             $gray-700;
+$list-group-disabled-bg:                 $gray-300;
+
+$list-group-action-color:                 $gray-700;
+$list-group-action-hover-color:      $list-group-action-color;
+$list-group-action-active-color:      $body-color;
+$list-group-action-active-bg:          $gray-200;
+
+// Breadcrumbs
+
+$breadcrumb-padding-y:                .5rem;
+$breadcrumb-padding-x:                1rem;
+$breadcrumb-item-padding:           .5rem;
+$breadcrumb-margin-bottom:         0rem;
+$breadcrumb-bg:                            transparent;
+$breadcrumb-divider-color:            $gray-600;
+$breadcrumb-active-color:              theme-color("primary");
+$breadcrumb-divider:                     "/";
+
+// Tooltips
+
+$tooltip-font-size:                 $font-size-xs;
+$tooltip-max-width:              200px;
+$tooltip-color:                       $white;
+$tooltip-bg:                           $dark;
+$tooltip-opacity:                   1;
+$tooltip-padding-y:               4px;
+$tooltip-padding-x:               10px;
+$tooltip-margin:                    0;
+
+$tooltip-arrow-width:           15px;
+$tooltip-arrow-height:          7px;
+$tooltip-arrow-color:            $tooltip-bg;
+
+
+// Popovers
+
+$popover-bg:                                 $white;
+$popover-max-width:                    260px;
+$popover-border-width:                $border-width;
+$popover-border-color:                 $gray-400;
+$popover-box-shadow:                  0 .25rem .5rem rgba($black,.2);
+
+$popover-header-bg:                     darken($popover-bg, 3%);
+$popover-header-color:                 #333;
+$popover-header-padding-y:         .5rem;
+$popover-header-padding-x:         .75rem;
+
+$popover-body-color:                    $body-color;
+$popover-body-padding-y:            $popover-header-padding-y;
+$popover-body-padding-x:            $popover-header-padding-x;
+
+$popover-arrow-width:                 .8rem;
+$popover-arrow-height:                .4rem;
+$popover-arrow-color:                   $popover-bg;
+$popover-arrow-outer-color:         fade-in($popover-border-color, 1);
+
+
+// Footers
+
+// Dark Colors
+
+$footer-dark-text-color:                 $bluegray-700;
+$footer-dark-border-color:            $gray-300;
+$footer-dark-title-color:                 $bluegray-800;
+$footer-dark-title-border-color:     $footer-dark-border-color;
+$footer-dark-icon-bg:                    $gray-400;
+$footer-dark-icon-color:                $bluegray-400;
+$footer-dark-links:                         $footer-dark-text-color;
+$footer-dark-copyright-bg:            $gray-300;
+
+// Light Colors
+
+$footer-light-text-color:                 $bluegray-300;
+$footer-light-border-color:            $bluegray-900;
+$footer-light-title-color:                 $bluegray-200;
+$footer-light-title-border-color:     $footer-light-border-color;
+$footer-light-icon-bg:                    $gray-400;
+$footer-light-icon-color:                $bluegray-400;
+$footer-light-links:                         $footer-light-text-color;
+$footer-light-copyright-bg:            $gray-300;
+
+$footer-links-hover:                       theme-color("primary");
+
+
+// Ribbons
+
+$ribbon-color: theme-color('primary');

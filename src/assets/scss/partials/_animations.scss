@@ -1,0 +1,387 @@
+/*
+    @
+    @   30. ANIMATIONS
+    @       30.1 LEFT / TOP ( OVERLAY + PUSH )
+    @       30.2 TOP REVEAL
+    @       30.3 BOTTOM REVEAL
+    @       30.4 BOTTOM SLIDE
+    @       30.5 ZOOM
+    @       30.5 FADE IN
+    @       30.6 SCROLL DOWN ( BUTTON )
+    @       30.7 SCROLL UP ( BUTTON )
+    @       30.8 TYPED ( CURSOR ) BLINK
+    @
+*/
+
+.animated {
+    -webkit-animation-duration: 0.5s;
+    animation-duration: 0.5s;
+}
+
+.wrap-hover {
+    position: relative;
+    max-width: 100%;
+    margin: 0;
+    padding:0;
+    overflow: hidden;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    //-webkit-transform: translateZ(0);
+    //transform: translateZ(0);
+}
+
+[class*="wrap-content"],
+[class*="wrap-content-partially"] {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transition: all 0.3s ease;
+}
+
+.wrap-content-slide-left {
+    -webkit-transform: translateX(-100%);
+    -ms-transform: translateX(-100%);
+    transform: translateX(-100%);
+}
+.wrap-content-slide-right {
+    -webkit-transform: translateX(100%);
+    -ms-transform: translateX(100%);
+    transform: translateX(100%);
+}
+.wrap-content-slide-down {
+    -webkit-transform: translateY(-100%);
+    -ms-transform: translateY(-100%);
+    transform: translateY(-100%);
+}
+.wrap-content-slide-up {
+    -webkit-transform: translateY(100%);
+    -ms-transform: translateY(100%);
+    transform: translateY(100%);
+}
+
+//  Partially Slide Up
+//
+
+.wrap-content-partially-slide-up {
+    top: auto;
+    -webkit-transform: translateY(100%);
+    transform: translateY(100%);
+    .wrap-visible {
+        position: absolute;
+        bottom: 100%;
+        left: 0;
+        right: 0;
+        padding-left: inherit;
+        padding-right: inherit;
+        background: inherit;
+    }
+}
+
+.wrap-content-partially-slide-down {
+    bottom: auto;
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%);
+    overflow: visible;
+    .wrap-visible {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        padding-left: inherit;
+        padding-right: inherit;
+        background: inherit;
+    }
+}
+
+.wrap-hover:hover [class*="wrap-content-slide"],
+.wrap-hover:hover [class*="wrap-content-partially"] {
+    -webkit-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    transform: translate(0, 0);
+}
+
+//  Fade Wrap Content
+//
+
+.wrap-hover {
+    .wrap-content-fade {
+        opacity: 0;
+        z-index: 1;
+    }
+    &:hover {
+        .wrap-content-fade {
+            opacity: 1;
+        }
+    }
+}
+
+//  Zoom Image
+//
+
+.wrap-hover {
+    .wrap-hover-img-zoom {
+        transition: 0.2s ease-in-out;
+    }
+    &:hover {
+        .wrap-hover-img-zoom {
+            transform: scale(1.05);
+        }
+    }
+}
+
+
+/////////////////////////
+/////////////////////////
+/////////////////////////
+
+.caption {
+    overflow: hidden;
+    position: relative;
+    .caption-default, .caption-active {
+        transition: all 0.3s ease-in-out;
+    }
+    .caption-active {
+        width:100%;
+        height:100%;
+        position: absolute;
+        z-index: 20;
+    }
+}
+
+
+/*
+    30.3
+    BOTTOM SLIDE
+    -------------------------------------------------------------------------------------------------
+*/
+
+.bottom-slide {
+    .caption{
+        transition-duration: .3s;
+        .caption-default {
+            transform: translate(0);
+        }
+        .caption-active {
+            width: auto;
+            height: auto;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            top: auto;
+            transform:translateY(102%);
+        }
+        &:hover {
+            .caption-active {
+                transform:translateY(0%);
+            }
+        }
+    }
+}
+
+/*
+    30.4
+    ZOOM
+    -------------------------------------------------------------------------------------------------
+*/
+
+.zoom {
+    .caption {
+        .caption-default {
+            position:relative;
+            img {
+                transition: 0.2s ease-in-out;
+            }
+        }
+        .caption-active {
+            background-color: rgba(theme-color("primary"), .8);
+            opacity:0;
+            width: auto;
+            height: auto;
+            top:0;
+            left:0;
+            right:0;
+            bottom:0;
+        }
+        &:hover {
+            .caption-default {
+                img {
+                    transform: scale(1.1);
+                }
+                &:after {
+                    opacity:1;
+                }
+            }
+            .caption-active {
+                opacity:1;
+            }
+        }
+    }
+}
+
+.zoom-effect:hover {
+    transform: scale(1.2);
+}
+
+/*
+    30.5
+    FADE IN
+    -------------------------------------------------------------------------------------------------
+*/
+
+//.fadein {
+//    .caption {
+//        .caption-active {
+//            background-color: rgba(theme-color("primary"), .8);
+//            opacity:0;
+//            transition: .3s ease-in-out;
+//            width: auto;
+//            height:auto;
+//            top:0;
+//            left:0;
+//            right:0;
+//            bottom:0;
+//        }
+//        &:hover {
+//            .caption-active {
+//                opacity:1;
+//            }
+//        }
+//    }
+//}
+
+
+
+//  Typed Cursor
+//  ------------------------------------------------------------------------------------------------
+
+.typed-cursor {
+    top:-2px;
+    position: relative;
+    font-weight: 100;
+    opacity:1;
+    animation: blink .7s infinite;
+    animation-timing-function: ease;
+    animation-delay: 0s;
+    animation-direction: normal;
+}
+@keyframes blink {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+}
+
+//  Overwrite Animate CSS
+//  ------------------------------------------------------------------------------------------------
+
+//  FADE IN LEFT
+//  ------------------------------------------------------------------------------------------------
+
+@-webkit-keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        -webkit-transform: translate3d(-20%, 0, 0);
+        transform: translate3d(-20%, 0, 0);
+    }
+    to {
+        opacity: 1;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+}
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        -webkit-transform: translate3d(-20%, 0, 0);
+        transform: translate3d(-20%, 0, 0);
+    }
+
+    to {
+        opacity: 1;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+}
+.fadeInLeft {
+    -webkit-animation-name: fadeInLeft;
+    animation-name: fadeInLeft;
+}
+
+//  FADE IN UP
+//  ------------------------------------------------------------------------------------------------
+
+@-webkit-keyframes fadeInRight {
+    from {
+        opacity: 0;
+        -webkit-transform: translate3d(20%, 0, 0);
+        transform: translate3d(20%, 0, 0);
+    }
+
+    to {
+        opacity: 1;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        -webkit-transform: translate3d(20%, 0, 0);
+        transform: translate3d(20%, 0, 0);
+    }
+
+    to {
+        opacity: 1;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.fadeInRight {
+    -webkit-animation-name: fadeInRight;
+    animation-name: fadeInRight;
+}
+
+//  FADE IN UP
+//  ------------------------------------------------------------------------------------------------
+
+@-webkit-keyframes fadeInUp {
+    from {
+        opacity: 0;
+        -webkit-transform: translate3d(0, 20%, 0);
+        transform: translate3d(0, 20%, 0);
+    }
+
+    to {
+        opacity: 1;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        -webkit-transform: translate3d(0, 20%, 0);
+        transform: translate3d(0, 20%, 0);
+    }
+
+    to {
+        opacity: 1;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.fadeInUp {
+    -webkit-animation-name: fadeInUp;
+    animation-name: fadeInUp;
+}
+
+
+

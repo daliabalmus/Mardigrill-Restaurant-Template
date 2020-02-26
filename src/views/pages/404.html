@@ -1,0 +1,47 @@
+{% extends '../_partials/main-layout.html' %}
+{% block page-title %}<title>Restaurant Events Single </title> {% endblock %}
+{% block content %}
+<!-- Main Wrapper -->
+<div class="main-wrapper">
+
+    <!-- Header -->
+    <header id="header" class="g-header g-py-30">
+        <!-- Navbar -->
+        <div class="g-navbar-wrapper g-navbar-ribbon ribbon-light g-navbar-white-color bg-transparent">
+            {% include '../_partials/navbar.html' %}
+        </div>
+        <!-- END Navbar -->
+    </header>
+    <!-- END Header -->
+
+    <!-- Main Content -->
+    <div id="main-content">
+
+        <section class="g-py-100 text-center">
+            <div class="container">
+                <h1 class="error-content">404</h1>
+                <h2 class="font-dancing g-font-size-45 g-mb-20">Page Not Found!</h2>
+                <h4 class="g-mb-20">Oops! Looks Like Something Going Wrong</h4>
+                <p class="text-muted g-mb-40">We can’t seem to find the page you’re looking for <br>
+                    make sure that you have typed the currect URL</p>
+                <p>
+                    <a href="index.html" class="btn g-btn-size-4 g-btn-primary g-rounded-50"><i class="icon-paper-plane g-mr-10"></i>Go to home</a>
+                </p>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <div class="brush-effect-top">
+            {% include '../_partials/footer.html' %}
+        </div>
+        <!-- END Footer -->
+
+    </div>
+    <!-- END Main Content -->
+
+</div>
+<!-- END Main Wrapper -->
+{% endblock %}
+{% block additional-footer-scripts %}{% endblock %}
+
+
