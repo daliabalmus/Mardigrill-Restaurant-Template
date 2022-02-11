@@ -37,7 +37,7 @@
     "gulp-swig": "^0.9.1",
     "jquery": "^3.6.0",
     "magnific-popup": "^1.1.0",
-    "node-sass": "^4.14.1",
+    "node-sass": "^7.0.0",
     "popper.js": "^1.14.7",
     "simple-line-icons": "^2.4.1",
     "wowjs": "^1.1.3"
